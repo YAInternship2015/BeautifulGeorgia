@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		85D283B81B7944BF00546367 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283B71B7944BF00546367 /* main.m */; };
+		85D283C11B7944BF00546367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D283BF1B7944BF00546367 /* Main.storyboard */; };
+		85D283C31B7944BF00546367 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D283C21B7944BF00546367 /* Images.xcassets */; };
+		85D283C61B7944BF00546367 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85D283C41B7944BF00546367 /* LaunchScreen.xib */; };
+		85D283D21B7944BF00546367 /* BeautifulGeorgiaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283D11B7944BF00546367 /* BeautifulGeorgiaTests.m */; };
+		85D283E71B79454B00546367 /* NDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283DD1B79454B00546367 /* NDAppDelegate.m */; };
+		85D283E81B79454B00546367 /* NDNamedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283DF1B79454B00546367 /* NDNamedImage.m */; };
+		85D283E91B79454B00546367 /* NDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283E21B79454B00546367 /* NDTableViewController.m */; };
+		85D283EA1B79454B00546367 /* NDHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283E51B79454B00546367 /* NDHeaderView.m */; };
+		85D283EB1B79454B00546367 /* NDHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85D283E61B79454B00546367 /* NDHeaderView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		85D283CC1B7944BF00546367 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 85D283AA1B7944BF00546367 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 85D283B11B7944BF00546367;
+			remoteInfo = BeautifulGeorgia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		85D283B21B7944BF00546367 /* BeautifulGeorgia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautifulGeorgia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		85D283B61B7944BF00546367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85D283B71B7944BF00546367 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		85D283C01B7944BF00546367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		85D283C21B7944BF00546367 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		85D283C51B7944BF00546367 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		85D283CB1B7944BF00546367 /* BeautifulGeorgiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeautifulGeorgiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		85D283D01B7944BF00546367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85D283D11B7944BF00546367 /* BeautifulGeorgiaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeautifulGeorgiaTests.m; sourceTree = "<group>"; };
+		85D283DC1B79454B00546367 /* NDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAppDelegate.h; sourceTree = "<group>"; };
+		85D283DD1B79454B00546367 /* NDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAppDelegate.m; sourceTree = "<group>"; };
+		85D283DE1B79454B00546367 /* NDNamedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDNamedImage.h; sourceTree = "<group>"; };
+		85D283DF1B79454B00546367 /* NDNamedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDNamedImage.m; sourceTree = "<group>"; };
+		85D283E11B79454B00546367 /* NDTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDTableViewController.h; sourceTree = "<group>"; };
+		85D283E21B79454B00546367 /* NDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDTableViewController.m; sourceTree = "<group>"; };
+		85D283E41B79454B00546367 /* NDHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDHeaderView.h; sourceTree = "<group>"; };
+		85D283E51B79454B00546367 /* NDHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDHeaderView.m; sourceTree = "<group>"; };
+		85D283E61B79454B00546367 /* NDHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NDHeaderView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		85D283AF1B7944BF00546367 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85D283C81B7944BF00546367 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		85D283A91B7944BF00546367 = {
+			isa = PBXGroup;
+			children = (
+				85D283B41B7944BF00546367 /* BeautifulGeorgia */,
+				85D283CE1B7944BF00546367 /* BeautifulGeorgiaTests */,
+				85D283B31B7944BF00546367 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		85D283B31B7944BF00546367 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				85D283B21B7944BF00546367 /* BeautifulGeorgia.app */,
+				85D283CB1B7944BF00546367 /* BeautifulGeorgiaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		85D283B41B7944BF00546367 /* BeautifulGeorgia */ = {
+			isa = PBXGroup;
+			children = (
+				85D283B61B7944BF00546367 /* Info.plist */,
+				85D283B71B7944BF00546367 /* main.m */,
+				85D283BF1B7944BF00546367 /* Main.storyboard */,
+				85D283C21B7944BF00546367 /* Images.xcassets */,
+				85D283C41B7944BF00546367 /* LaunchScreen.xib */,
+				85D283DB1B79454B00546367 /* Common */,
+				85D283E01B79454B00546367 /* Controllers */,
+				85D283E31B79454B00546367 /* Views */,
+			);
+			path = BeautifulGeorgia;
+			sourceTree = "<group>";
+		};
+		85D283CE1B7944BF00546367 /* BeautifulGeorgiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				85D283D11B7944BF00546367 /* BeautifulGeorgiaTests.m */,
+				85D283CF1B7944BF00546367 /* Supporting Files */,
+			);
+			path = BeautifulGeorgiaTests;
+			sourceTree = "<group>";
+		};
+		85D283CF1B7944BF00546367 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				85D283D01B7944BF00546367 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		85D283DB1B79454B00546367 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				85D283DC1B79454B00546367 /* NDAppDelegate.h */,
+				85D283DD1B79454B00546367 /* NDAppDelegate.m */,
+				85D283DE1B79454B00546367 /* NDNamedImage.h */,
+				85D283DF1B79454B00546367 /* NDNamedImage.m */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		85D283E01B79454B00546367 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				85D283E11B79454B00546367 /* NDTableViewController.h */,
+				85D283E21B79454B00546367 /* NDTableViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		85D283E31B79454B00546367 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				85D283E41B79454B00546367 /* NDHeaderView.h */,
+				85D283E51B79454B00546367 /* NDHeaderView.m */,
+				85D283E61B79454B00546367 /* NDHeaderView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		85D283B11B7944BF00546367 /* BeautifulGeorgia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85D283D51B7944BF00546367 /* Build configuration list for PBXNativeTarget "BeautifulGeorgia" */;
+			buildPhases = (
+				85D283AE1B7944BF00546367 /* Sources */,
+				85D283AF1B7944BF00546367 /* Frameworks */,
+				85D283B01B7944BF00546367 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BeautifulGeorgia;
+			productName = BeautifulGeorgia;
+			productReference = 85D283B21B7944BF00546367 /* BeautifulGeorgia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		85D283CA1B7944BF00546367 /* BeautifulGeorgiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85D283D81B7944BF00546367 /* Build configuration list for PBXNativeTarget "BeautifulGeorgiaTests" */;
+			buildPhases = (
+				85D283C71B7944BF00546367 /* Sources */,
+				85D283C81B7944BF00546367 /* Frameworks */,
+				85D283C91B7944BF00546367 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				85D283CD1B7944BF00546367 /* PBXTargetDependency */,
+			);
+			name = BeautifulGeorgiaTests;
+			productName = BeautifulGeorgiaTests;
+			productReference = 85D283CB1B7944BF00546367 /* BeautifulGeorgiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		85D283AA1B7944BF00546367 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = Hope;
+				TargetAttributes = {
+					85D283B11B7944BF00546367 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					85D283CA1B7944BF00546367 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 85D283B11B7944BF00546367;
+					};
+				};
+			};
+			buildConfigurationList = 85D283AD1B7944BF00546367 /* Build configuration list for PBXProject "BeautifulGeorgia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 85D283A91B7944BF00546367;
+			productRefGroup = 85D283B31B7944BF00546367 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				85D283B11B7944BF00546367 /* BeautifulGeorgia */,
+				85D283CA1B7944BF00546367 /* BeautifulGeorgiaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		85D283B01B7944BF00546367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85D283C11B7944BF00546367 /* Main.storyboard in Resources */,
+				85D283C61B7944BF00546367 /* LaunchScreen.xib in Resources */,
+				85D283C31B7944BF00546367 /* Images.xcassets in Resources */,
+				85D283EB1B79454B00546367 /* NDHeaderView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85D283C91B7944BF00546367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85D283AE1B7944BF00546367 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85D283E71B79454B00546367 /* NDAppDelegate.m in Sources */,
+				85D283EA1B79454B00546367 /* NDHeaderView.m in Sources */,
+				85D283E81B79454B00546367 /* NDNamedImage.m in Sources */,
+				85D283B81B7944BF00546367 /* main.m in Sources */,
+				85D283E91B79454B00546367 /* NDTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85D283C71B7944BF00546367 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				85D283D21B7944BF00546367 /* BeautifulGeorgiaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		85D283CD1B7944BF00546367 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 85D283B11B7944BF00546367 /* BeautifulGeorgia */;
+			targetProxy = 85D283CC1B7944BF00546367 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		85D283BF1B7944BF00546367 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85D283C01B7944BF00546367 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		85D283C41B7944BF00546367 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				85D283C51B7944BF00546367 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		85D283D31B7944BF00546367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		85D283D41B7944BF00546367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		85D283D61B7944BF00546367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BeautifulGeorgia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		85D283D71B7944BF00546367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = BeautifulGeorgia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		85D283D91B7944BF00546367 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BeautifulGeorgiaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeautifulGeorgia.app/BeautifulGeorgia";
+			};
+			name = Debug;
+		};
+		85D283DA1B7944BF00546367 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = BeautifulGeorgiaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeautifulGeorgia.app/BeautifulGeorgia";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		85D283AD1B7944BF00546367 /* Build configuration list for PBXProject "BeautifulGeorgia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85D283D31B7944BF00546367 /* Debug */,
+				85D283D41B7944BF00546367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85D283D51B7944BF00546367 /* Build configuration list for PBXNativeTarget "BeautifulGeorgia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85D283D61B7944BF00546367 /* Debug */,
+				85D283D71B7944BF00546367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		85D283D81B7944BF00546367 /* Build configuration list for PBXNativeTarget "BeautifulGeorgiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85D283D91B7944BF00546367 /* Debug */,
+				85D283DA1B7944BF00546367 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 85D283AA1B7944BF00546367 /* Project object */;
+}
