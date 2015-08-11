@@ -25,6 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self loadHeaderNib];
+
+#warning Как я уже писал в замечаниях к заданию, Вы должны реализовать отдельный класс-датасорс, который будет хранить все модели NDNamedImage. Этим не должен заниматься вью контроллер, это не его ответственность. Этот класс-датасорс внутри себя хранит массив объектов NDNamedImage, но в *.h он его не показывает. В его *.h файле есть только необходимый вью контроллеру интерфейс, которого достаточно для отображения данных в таблице
+
     self.images = [NSArray arrayWithObjects:
                    [NDNamedImage imageWithName:[UIImage imageNamed:@"1"] withName:@"Borjomi"],
                    [NDNamedImage imageWithName:[UIImage imageNamed:@"2"] withName:@"Mountain roads"],
@@ -44,6 +47,7 @@
     [self.tableView registerNib:headerNib forHeaderFooterViewReuseIdentifier:headerName];
 }
 
+#warning пустой метод - удаляем
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 
@@ -51,6 +55,7 @@
 
 #pragma mark - UITableViewDataSource
 
+#warning зачем здесь подставлять константу, если в Вашей реализации можно спросить у массива, сколько у него элементов? А в реализации с датасорсом эту информацию можно будет получить у него
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return ROWS_NUM;
 }
@@ -60,6 +65,7 @@
     
     NDNamedImage *namedImage = [self.images objectAtIndex:indexPath.row];
     
+#warning Следовало сделать отдельный класс-ячейку, наследника UITableViewCell, которая в себе бы инкапсулировала заполнение моделью NDNamedImage. Тогда вся логика тэгов (которая является дурным тоном) не будет нужна
     UIImageView *imageView = (UIImageView *)[cell viewWithTag:kImageViewTag];
     imageView.image = namedImage.image;
     

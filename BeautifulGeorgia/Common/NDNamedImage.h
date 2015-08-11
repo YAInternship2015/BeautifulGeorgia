@@ -12,9 +12,11 @@
 
 @interface NDNamedImage : NSObject
 
+#warning Здесь в *.h файле Вы показали readwrite свойства, то есть извне любой класс сможет изменить модель, что не есть хорошо. В *.h файле стоит показывать эти свойства с доступом readonly, чтобы их нельзя было менять извне
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) UIImage *image;
 
+#warning есть проблемы с форматированием кода, неправильно расставлены отступы, почитайте еще раз гайдлайны
 + (id) imageWithName: (UIImage*)image withName:(NSString *)name;
 
 @end
