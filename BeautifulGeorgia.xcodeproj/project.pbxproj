@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8576E0F81B87337A00A08A45 /* NDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E0F71B87337A00A08A45 /* NDTableViewCell.m */; };
+		8576E0FB1B87378700A08A45 /* NDDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E0FA1B87378700A08A45 /* NDDataSource.m */; };
 		85D283B81B7944BF00546367 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283B71B7944BF00546367 /* main.m */; };
 		85D283C11B7944BF00546367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D283BF1B7944BF00546367 /* Main.storyboard */; };
 		85D283C31B7944BF00546367 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D283C21B7944BF00546367 /* Images.xcassets */; };
 		85D283C61B7944BF00546367 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85D283C41B7944BF00546367 /* LaunchScreen.xib */; };
 		85D283D21B7944BF00546367 /* BeautifulGeorgiaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283D11B7944BF00546367 /* BeautifulGeorgiaTests.m */; };
 		85D283E71B79454B00546367 /* NDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283DD1B79454B00546367 /* NDAppDelegate.m */; };
-		85D283E81B79454B00546367 /* NDNamedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283DF1B79454B00546367 /* NDNamedImage.m */; };
+		85D283E81B79454B00546367 /* NDNamedImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283DF1B79454B00546367 /* NDNamedImageModel.m */; };
 		85D283E91B79454B00546367 /* NDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283E21B79454B00546367 /* NDTableViewController.m */; };
 		85D283EA1B79454B00546367 /* NDHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283E51B79454B00546367 /* NDHeaderView.m */; };
 		85D283EB1B79454B00546367 /* NDHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85D283E61B79454B00546367 /* NDHeaderView.xib */; };
@@ -30,6 +32,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8576E0F61B87337A00A08A45 /* NDTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDTableViewCell.h; sourceTree = "<group>"; };
+		8576E0F71B87337A00A08A45 /* NDTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDTableViewCell.m; sourceTree = "<group>"; };
+		8576E0F91B87378700A08A45 /* NDDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDDataSource.h; sourceTree = "<group>"; };
+		8576E0FA1B87378700A08A45 /* NDDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDDataSource.m; sourceTree = "<group>"; };
 		85D283B21B7944BF00546367 /* BeautifulGeorgia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautifulGeorgia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D283B61B7944BF00546367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85D283B71B7944BF00546367 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -41,8 +47,8 @@
 		85D283D11B7944BF00546367 /* BeautifulGeorgiaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BeautifulGeorgiaTests.m; sourceTree = "<group>"; };
 		85D283DC1B79454B00546367 /* NDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAppDelegate.h; sourceTree = "<group>"; };
 		85D283DD1B79454B00546367 /* NDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAppDelegate.m; sourceTree = "<group>"; };
-		85D283DE1B79454B00546367 /* NDNamedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDNamedImage.h; sourceTree = "<group>"; };
-		85D283DF1B79454B00546367 /* NDNamedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDNamedImage.m; sourceTree = "<group>"; };
+		85D283DE1B79454B00546367 /* NDNamedImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDNamedImageModel.h; sourceTree = "<group>"; };
+		85D283DF1B79454B00546367 /* NDNamedImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDNamedImageModel.m; sourceTree = "<group>"; };
 		85D283E11B79454B00546367 /* NDTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDTableViewController.h; sourceTree = "<group>"; };
 		85D283E21B79454B00546367 /* NDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDTableViewController.m; sourceTree = "<group>"; };
 		85D283E41B79454B00546367 /* NDHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDHeaderView.h; sourceTree = "<group>"; };
@@ -123,8 +129,10 @@
 			children = (
 				85D283DC1B79454B00546367 /* NDAppDelegate.h */,
 				85D283DD1B79454B00546367 /* NDAppDelegate.m */,
-				85D283DE1B79454B00546367 /* NDNamedImage.h */,
-				85D283DF1B79454B00546367 /* NDNamedImage.m */,
+				85D283DE1B79454B00546367 /* NDNamedImageModel.h */,
+				85D283DF1B79454B00546367 /* NDNamedImageModel.m */,
+				8576E0F91B87378700A08A45 /* NDDataSource.h */,
+				8576E0FA1B87378700A08A45 /* NDDataSource.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -144,6 +152,8 @@
 				85D283E41B79454B00546367 /* NDHeaderView.h */,
 				85D283E51B79454B00546367 /* NDHeaderView.m */,
 				85D283E61B79454B00546367 /* NDHeaderView.xib */,
+				8576E0F61B87337A00A08A45 /* NDTableViewCell.h */,
+				8576E0F71B87337A00A08A45 /* NDTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,7 +261,9 @@
 			files = (
 				85D283E71B79454B00546367 /* NDAppDelegate.m in Sources */,
 				85D283EA1B79454B00546367 /* NDHeaderView.m in Sources */,
-				85D283E81B79454B00546367 /* NDNamedImage.m in Sources */,
+				8576E0F81B87337A00A08A45 /* NDTableViewCell.m in Sources */,
+				8576E0FB1B87378700A08A45 /* NDDataSource.m in Sources */,
+				85D283E81B79454B00546367 /* NDNamedImageModel.m in Sources */,
 				85D283B81B7944BF00546367 /* main.m in Sources */,
 				85D283E91B79454B00546367 /* NDTableViewController.m in Sources */,
 			);
@@ -450,6 +462,7 @@
 				85D283D71B7944BF00546367 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		85D283D81B7944BF00546367 /* Build configuration list for PBXNativeTarget "BeautifulGeorgiaTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +471,7 @@
 				85D283DA1B7944BF00546367 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

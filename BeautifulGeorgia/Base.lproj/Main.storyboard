@@ -13,19 +13,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="2vS-sX-kgQ">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="imageCell" id="2vS-sX-kgQ" customClass="NDTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2vS-sX-kgQ" id="iD5-Ga-yOa">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cld-wW-Eqv">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cld-wW-Eqv">
                                             <rect key="frame" x="20" y="15" width="75" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="75" id="6MD-Jd-tVW"/>
                                                 <constraint firstAttribute="height" constant="50" id="MHc-Ul-GG4"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8H-28-SG3">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8H-28-SG3">
                                             <rect key="frame" x="103" y="29.5" width="42" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -39,6 +39,10 @@
                                         <constraint firstItem="X8H-28-SG3" firstAttribute="leading" secondItem="Cld-wW-Eqv" secondAttribute="trailing" constant="8" symbolic="YES" id="thJ-Cm-wb1"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgView" destination="Cld-wW-Eqv" id="8fe-mP-4fz"/>
+                                    <outlet property="titleLabel" destination="X8H-28-SG3" id="63f-V0-ABq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
