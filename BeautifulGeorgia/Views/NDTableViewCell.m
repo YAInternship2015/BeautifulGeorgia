@@ -9,6 +9,13 @@
 #import "NDTableViewCell.h"
 #import "NDNamedImageModel.h"
 
+@interface NDTableViewCell ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
+@end
+
 @implementation NDTableViewCell
 
 - (void)awakeFromNib {

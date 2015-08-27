@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Item 0</key>
+	<dict>
+		<key>imageName</key>
+		<string>0</string>
+		<key>title</key>
+		<string>Waterfall</string>
+	</dict>
+	<key>Item 1</key>
+	<dict>
+		<key>imageName</key>
+		<string>1</string>
+		<key>title</key>
+		<string>Borjomi</string>
+	</dict>
+	<key>Item 2</key>
+	<dict>
+		<key>imageName</key>
+		<string>2</string>
+		<key>title</key>
+		<string>Mountain roads</string>
+	</dict>
+	<key>Item 3</key>
+	<dict>
+		<key>imageName</key>
+		<string>3</string>
+		<key>title</key>
+		<string>Wild nature</string>
+	</dict>
+	<key>Item 4</key>
+	<dict>
+		<key>imageName</key>
+		<string>4</string>
+		<key>title</key>
+		<string>Mountain village</string>
+	</dict>
+	<key>Item 5</key>
+	<dict>
+		<key>imageName</key>
+		<string>5</string>
+		<key>title</key>
+		<string>Wild wood</string>
+	</dict>
+	<key>Item 6</key>
+	<dict>
+		<key>imageName</key>
+		<string>6</string>
+		<key>title</key>
+		<string>Mountains</string>
+	</dict>
+	<key>Item 7</key>
+	<dict>
+		<key>imageName</key>
+		<string>7</string>
+		<key>title</key>
+		<string>Mtirala national park</string>
+	</dict>
+	<key>Item 8</key>
+	<dict>
+		<key>imageName</key>
+		<string>8</string>
+		<key>title</key>
+		<string>Mountain sky</string>
+	</dict>
+	<key>Item 9</key>
+	<dict>
+		<key>imageName</key>
+		<string>9</string>
+		<key>title</key>
+		<string>Sunshine</string>
+	</dict>
+</dict>
+</plist>

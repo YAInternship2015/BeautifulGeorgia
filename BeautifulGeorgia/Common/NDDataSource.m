@@ -13,19 +13,24 @@
 
 @implementation NDDataSource
 
-+ (NSArray *) getNamedImages {
-    NSArray *array = [NSArray arrayWithObjects:
-                   [NDNamedImageModel imageWithName:[UIImage imageNamed:@"1"] withName:@"Borjomi"],
-                   [NDNamedImageModel imageWithName:[UIImage imageNamed:@"2"] withName:@"Mountain roads"],
-                   [NDNamedImageModel imageWithName:[UIImage imageNamed:@"3"] withName:@"Wild nature"],
-                   [NDNamedImageModel imageWithName:[UIImage imageNamed:@"4"] withName:@"Mountain village"],
-                   [NDNamedImageModel imageWithName:[UIImage imageNamed:@"5"] withName:@"Wild wood"],
-                   [NDNamedImageModel imageWithName:[UIImage imageNamed:@"6"] withName:@"Mountains"],
-                   [NDNamedImageModel imageWithName:[UIImage imageNamed:@"7"] withName:@"Mtirala national park"],
-                   [NDNamedImageModel imageWithName:[UIImage imageNamed:@"8"] withName:@"Mountain sky"],
-                   [NDNamedImageModel imageWithName:[UIImage imageNamed:@"9"] withName:@"Sunshine"],
-                   [NDNamedImageModel imageWithName:[UIImage imageNamed:@"10"] withName:@"Waterfall"], nil];
-    return array;
++ (NSArray *)getNamedImages {
+    return [self loadDataFromPlist];
+}
+
++ (NSArray *)loadDataFromPlist {
+    NSMutableArray *resultArray = [NSMutableArray array];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
+    NSDictionary *baseDictionary = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    for (NSInteger i = 0; i < [baseDictionary count]; i ++) {
+        NSString *baseKey = [NSString stringWithFormat:@"Item %d", i];
+        NSDictionary *dictionary = [baseDictionary objectForKey:baseKey];
+        NSString *imageName = [dictionary objectForKey:@"imageName"];
+        NSString *title = [dictionary objectForKey:@"title"];
+        NDNamedImageModel *model = [NDNamedImageModel imageWithName:[UIImage imageNamed:imageName] withName:title];
+        [resultArray addObject:model];
+    }
+    return resultArray;
 }
 
 @end

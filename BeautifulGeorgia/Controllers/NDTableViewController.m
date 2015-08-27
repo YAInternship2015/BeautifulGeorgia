@@ -13,7 +13,6 @@
 #import "NDNamedImageModel.h"
 
 //views
-#import "NDHeaderView.h"
 #import "NDTableViewCell.h"
 
 //sources
@@ -29,14 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self loadHeaderNib];
     self.images = [NDDataSource getNamedImages];
-}
-
-- (void)loadHeaderNib {
-    NSString *headerName = NSStringFromClass([NDHeaderView class]);
-    UINib* headerNib = [UINib nibWithNibName:headerName bundle:nil];
-    [self.tableView registerNib:headerNib forHeaderFooterViewReuseIdentifier:headerName];
 }
 
 #pragma mark - UITableViewDataSource
@@ -50,11 +42,6 @@
     NDNamedImageModel *model = [self.images objectAtIndex:indexPath.row];
     [cell fill:model];
     return cell;
-}
-
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    NDHeaderView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier: NSStringFromClass([NDHeaderView class])];
-    return headerView;
 }
 
 #pragma mark - UITableViewDelegate

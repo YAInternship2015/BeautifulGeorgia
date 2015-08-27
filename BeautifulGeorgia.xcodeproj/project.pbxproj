@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		8576E0F81B87337A00A08A45 /* NDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E0F71B87337A00A08A45 /* NDTableViewCell.m */; };
 		8576E0FB1B87378700A08A45 /* NDDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E0FA1B87378700A08A45 /* NDDataSource.m */; };
+		8576E0FE1B8A1AEC00A08A45 /* NDCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E0FD1B8A1AEC00A08A45 /* NDCollectionViewController.m */; };
+		8576E1011B8A1BA600A08A45 /* NDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E1001B8A1BA600A08A45 /* NDCollectionViewCell.m */; };
+		8576E1041B8A249D00A08A45 /* NDStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E1031B8A249D00A08A45 /* NDStoryboardSegue.m */; };
+		8576E1071B8A284600A08A45 /* NDContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E1061B8A284600A08A45 /* NDContainerViewController.m */; };
+		8576E10A1B8DF0BA00A08A45 /* NDAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E1091B8DF0BA00A08A45 /* NDAddItemViewController.m */; };
+		85B398D91B8F21020012587F /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85B398D81B8F21020012587F /* Data.plist */; };
 		85D283B81B7944BF00546367 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283B71B7944BF00546367 /* main.m */; };
 		85D283C11B7944BF00546367 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85D283BF1B7944BF00546367 /* Main.storyboard */; };
 		85D283C31B7944BF00546367 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85D283C21B7944BF00546367 /* Images.xcassets */; };
@@ -17,7 +23,6 @@
 		85D283E71B79454B00546367 /* NDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283DD1B79454B00546367 /* NDAppDelegate.m */; };
 		85D283E81B79454B00546367 /* NDNamedImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283DF1B79454B00546367 /* NDNamedImageModel.m */; };
 		85D283E91B79454B00546367 /* NDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283E21B79454B00546367 /* NDTableViewController.m */; };
-		85D283EA1B79454B00546367 /* NDHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283E51B79454B00546367 /* NDHeaderView.m */; };
 		85D283EB1B79454B00546367 /* NDHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 85D283E61B79454B00546367 /* NDHeaderView.xib */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +41,17 @@
 		8576E0F71B87337A00A08A45 /* NDTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDTableViewCell.m; sourceTree = "<group>"; };
 		8576E0F91B87378700A08A45 /* NDDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDDataSource.h; sourceTree = "<group>"; };
 		8576E0FA1B87378700A08A45 /* NDDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDDataSource.m; sourceTree = "<group>"; };
+		8576E0FC1B8A1AEC00A08A45 /* NDCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDCollectionViewController.h; sourceTree = "<group>"; };
+		8576E0FD1B8A1AEC00A08A45 /* NDCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDCollectionViewController.m; sourceTree = "<group>"; };
+		8576E0FF1B8A1BA600A08A45 /* NDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDCollectionViewCell.h; sourceTree = "<group>"; };
+		8576E1001B8A1BA600A08A45 /* NDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDCollectionViewCell.m; sourceTree = "<group>"; };
+		8576E1021B8A249D00A08A45 /* NDStoryboardSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDStoryboardSegue.h; sourceTree = "<group>"; };
+		8576E1031B8A249D00A08A45 /* NDStoryboardSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDStoryboardSegue.m; sourceTree = "<group>"; };
+		8576E1051B8A284600A08A45 /* NDContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDContainerViewController.h; sourceTree = "<group>"; };
+		8576E1061B8A284600A08A45 /* NDContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDContainerViewController.m; sourceTree = "<group>"; };
+		8576E1081B8DF0BA00A08A45 /* NDAddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAddItemViewController.h; sourceTree = "<group>"; };
+		8576E1091B8DF0BA00A08A45 /* NDAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAddItemViewController.m; sourceTree = "<group>"; };
+		85B398D81B8F21020012587F /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 		85D283B21B7944BF00546367 /* BeautifulGeorgia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeautifulGeorgia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85D283B61B7944BF00546367 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		85D283B71B7944BF00546367 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,8 +67,6 @@
 		85D283DF1B79454B00546367 /* NDNamedImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDNamedImageModel.m; sourceTree = "<group>"; };
 		85D283E11B79454B00546367 /* NDTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDTableViewController.h; sourceTree = "<group>"; };
 		85D283E21B79454B00546367 /* NDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDTableViewController.m; sourceTree = "<group>"; };
-		85D283E41B79454B00546367 /* NDHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDHeaderView.h; sourceTree = "<group>"; };
-		85D283E51B79454B00546367 /* NDHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDHeaderView.m; sourceTree = "<group>"; };
 		85D283E61B79454B00546367 /* NDHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NDHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +109,7 @@
 		85D283B41B7944BF00546367 /* BeautifulGeorgia */ = {
 			isa = PBXGroup;
 			children = (
+				85B398D81B8F21020012587F /* Data.plist */,
 				85D283B61B7944BF00546367 /* Info.plist */,
 				85D283B71B7944BF00546367 /* main.m */,
 				85D283BF1B7944BF00546367 /* Main.storyboard */,
@@ -133,6 +148,8 @@
 				85D283DF1B79454B00546367 /* NDNamedImageModel.m */,
 				8576E0F91B87378700A08A45 /* NDDataSource.h */,
 				8576E0FA1B87378700A08A45 /* NDDataSource.m */,
+				8576E1021B8A249D00A08A45 /* NDStoryboardSegue.h */,
+				8576E1031B8A249D00A08A45 /* NDStoryboardSegue.m */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -142,6 +159,12 @@
 			children = (
 				85D283E11B79454B00546367 /* NDTableViewController.h */,
 				85D283E21B79454B00546367 /* NDTableViewController.m */,
+				8576E0FC1B8A1AEC00A08A45 /* NDCollectionViewController.h */,
+				8576E0FD1B8A1AEC00A08A45 /* NDCollectionViewController.m */,
+				8576E1051B8A284600A08A45 /* NDContainerViewController.h */,
+				8576E1061B8A284600A08A45 /* NDContainerViewController.m */,
+				8576E1081B8DF0BA00A08A45 /* NDAddItemViewController.h */,
+				8576E1091B8DF0BA00A08A45 /* NDAddItemViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -149,11 +172,11 @@
 		85D283E31B79454B00546367 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				85D283E41B79454B00546367 /* NDHeaderView.h */,
-				85D283E51B79454B00546367 /* NDHeaderView.m */,
 				85D283E61B79454B00546367 /* NDHeaderView.xib */,
 				8576E0F61B87337A00A08A45 /* NDTableViewCell.h */,
 				8576E0F71B87337A00A08A45 /* NDTableViewCell.m */,
+				8576E0FF1B8A1BA600A08A45 /* NDCollectionViewCell.h */,
+				8576E1001B8A1BA600A08A45 /* NDCollectionViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -242,6 +265,7 @@
 				85D283C61B7944BF00546367 /* LaunchScreen.xib in Resources */,
 				85D283C31B7944BF00546367 /* Images.xcassets in Resources */,
 				85D283EB1B79454B00546367 /* NDHeaderView.xib in Resources */,
+				85B398D91B8F21020012587F /* Data.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,11 +284,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				85D283E71B79454B00546367 /* NDAppDelegate.m in Sources */,
-				85D283EA1B79454B00546367 /* NDHeaderView.m in Sources */,
+				8576E1071B8A284600A08A45 /* NDContainerViewController.m in Sources */,
 				8576E0F81B87337A00A08A45 /* NDTableViewCell.m in Sources */,
+				8576E1011B8A1BA600A08A45 /* NDCollectionViewCell.m in Sources */,
 				8576E0FB1B87378700A08A45 /* NDDataSource.m in Sources */,
+				8576E0FE1B8A1AEC00A08A45 /* NDCollectionViewController.m in Sources */,
+				8576E1041B8A249D00A08A45 /* NDStoryboardSegue.m in Sources */,
 				85D283E81B79454B00546367 /* NDNamedImageModel.m in Sources */,
 				85D283B81B7944BF00546367 /* main.m in Sources */,
+				8576E10A1B8DF0BA00A08A45 /* NDAddItemViewController.m in Sources */,
 				85D283E91B79454B00546367 /* NDTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
