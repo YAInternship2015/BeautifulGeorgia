@@ -11,5 +11,8 @@
 @interface NDDataValidator : NSObject
 
 + (BOOL)isValidModelTitle:(NSString *)title error:(NSError **)error;
++ (BOOL)isValidModelTitle:(NSUInteger)length
+                    range:(NSRange)range
+        replacementString:(NSString *)string;
 
 @end

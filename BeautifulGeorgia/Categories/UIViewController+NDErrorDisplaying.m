@@ -8,6 +8,8 @@
 
 #import "UIViewController+NDErrorDisplaying.h"
 
+NSString *const NDErrorDisplayingDidPressActionNotification = @"NDErrorDisplayingDidPressActionNotification";
+
 @implementation UIViewController (NDErrorDisplaying)
 
 - (void)showAlert:(NSString *)title
@@ -20,7 +22,7 @@
     
     UIAlertAction* ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault
                                                handler:^(UIAlertAction * action) {
-                                                   //
+                                                   [[NSNotificationCenter defaultCenter] postNotificationName:NDErrorDisplayingDidPressActionNotification object:action];
                                                }];
     [alert addAction:ok];
     alert.view.tintColor = [UIColor redColor];

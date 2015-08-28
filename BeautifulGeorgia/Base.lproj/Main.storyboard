@@ -60,7 +60,7 @@
                                         <rect key="frame" x="20" y="49" width="260" height="30"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="yes" returnKeyType="done"/>
                                         <connections>
                                             <outlet property="delegate" destination="iTe-JI-OlL" id="duQ-hw-Nl7"/>
                                         </connections>
@@ -194,7 +194,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Beautiful Georgia" id="VDO-s9-zs4">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="1A8-O4-4Rd">
+                        <barButtonItem key="leftBarButtonItem" image="switch_view" id="1A8-O4-4Rd">
                             <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="switchView:" destination="Qk0-P1-bBF" id="Ojx-so-IJh"/>
@@ -322,4 +322,7 @@
             <point key="canvasLocation" x="435" y="398"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="switch_view" width="26" height="26"/>
+    </resources>
 </document>

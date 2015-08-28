@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "NDDataSource.h"
 #import "NDNamedImageModel.h"
+#import "NDNamedImageFactory.h"
 
 NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFileContentDidChangeNotification";
 
@@ -51,7 +52,7 @@ NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFil
         for (NSDictionary *dictionary in temp) {
             NSString *imageName = [dictionary objectForKey:@"imageName"];
             NSString *title = [dictionary objectForKey:@"title"];
-            NDNamedImageModel *model = [NDNamedImageModel imageWithName:[UIImage imageNamed:imageName] withName:title];
+            NDNamedImageModel *model = [NDNamedImageFactory createObject:[UIImage imageNamed:imageName] name:title];
             [resultArray addObject:model];
         }
     }
@@ -68,15 +69,20 @@ NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFil
                                 model.name, @"title", nil];
     
     NSString *plistPath = [NDDataSource getPlistPath];
-    NSMutableArray *array = [[NSMutableArray alloc] initWithContentsOfFile:plistPath];
+    NSMutableArray *array = [NSMutableArray arrayWithContentsOfFile:plistPath];
     [array addObject:dictionary];
     
     NSError *theError = nil;
     NSData *plistData = [NSPropertyListSerialization dataWithPropertyList:array format:NSPropertyListBinaryFormat_v1_0 options:0 error:&theError];
     
     if(plistData) {
-        [plistData writeToFile:plistPath atomically:YES];
-        [[NSNotificationCenter defaultCenter] postNotificationName:NDDataSourceFileContentDidChangeNotification object:model];
+        theError = nil;
+        [plistData writeToFile:plistPath options:0 error:&theError];
+        if (!theError) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:NDDataSourceFileContentDidChangeNotification object:model];
+        } else {
+            *error = theError;
+        }
     }
     else {
         *error = theError;
@@ -84,11 +90,16 @@ NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFil
 }
 
 + (NSString *)getPlistPath {
-    NSString *rootPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,
-                                                              NSUserDomainMask, YES) objectAtIndex:0];
-    NSString *plistPath = [rootPath stringByAppendingPathComponent:@"Data.plist"];
-    if (![[NSFileManager defaultManager] fileExistsAtPath:plistPath]) {
-        plistPath = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
+
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+
+    NSString *plistPath = [documentsDirectory stringByAppendingPathComponent:@"Data.plist"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath: plistPath])
+    {
+        NSString *bundle = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
+        [[NSFileManager defaultManager] copyItemAtPath:bundle toPath:plistPath error:&error];
     }
     return plistPath;
 }

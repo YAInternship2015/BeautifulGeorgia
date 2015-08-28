@@ -33,6 +33,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self.titleTextField becomeFirstResponder];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(setFocus:)
+                                                 name:NDErrorDisplayingDidPressActionNotification
+                                               object:nil];
+}
+
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)setFocus:(NSNotification *)notification {
+    [self.titleTextField becomeFirstResponder];
 }
 
 #pragma mark - Actions
@@ -74,6 +86,10 @@
     [textField resignFirstResponder];
     [self saveNewItem];
     return YES;
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    return [NDDataValidator isValidModelTitle:textField.text.length range:range replacementString:string];
 }
 
 @end
