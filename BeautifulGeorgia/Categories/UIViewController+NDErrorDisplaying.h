@@ -13,7 +13,6 @@
 extern NSString *const NDErrorDisplayingDidPressActionNotification;
 
 - (void)showAlert:(NSString *)title
-             text:(NSString *)text
-       sourceView:(UIView *)sourceView;
+             text:(NSString *)text;
 
 @end

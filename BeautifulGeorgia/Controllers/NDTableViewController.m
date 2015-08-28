@@ -6,27 +6,16 @@
 //  Copyright (c) 2015 Hope. All rights reserved.
 //
 
-#warning не стоит так прямо комментировать все импорты
-//controllers
 #import "NDTableViewController.h"
-
-//models
 #import "NDNamedImageModel.h"
-
-//views
 #import "NDTableViewCell.h"
-
-//sources
 #import "NDDataSource.h"
-
-//categories
 #import "UIViewController+NDErrorDisplaying.h"
 
 @interface NDTableViewController () <NDDataSourceDelegate>
 
-#warning (nonatomic, strong)
-@property (strong, nonatomic) NSArray *images;
-@property (strong, nonatomic) NDDataSource *dataSource;
+@property (nonatomic, strong) NSArray *images;
+@property (nonatomic, strong) NDDataSource *dataSource;
 
 @end
 
@@ -35,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataSource = [[NDDataSource alloc] initWithDelegate:self];
-    self.images = [self.dataSource getNamedImages];
+    self.images = [self.dataSource namedImages];
 }
 
 #pragma mark - NDDataSourceDelegate
@@ -53,7 +42,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NDTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"imageCell" forIndexPath:indexPath];
     NDNamedImageModel *model = [self.images objectAtIndex:indexPath.row];
-    [cell fill:model];
+    [cell fillWithNamedImage:model];
     return cell;
 }
 

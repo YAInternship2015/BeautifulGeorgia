@@ -6,27 +6,15 @@
 //  Copyright (c) 2015 Hope. All rights reserved.
 //
 
-//controllers
 #import "NDAddItemViewController.h"
-
-//categories
 #import "UIViewController+NDErrorDisplaying.h"
-
-//sources
 #import "NDDataSource.h"
-
-//other
 #import "NDDataValidator.h"
 #import "NDNamedImageFactory.h"
 
 @interface NDAddItemViewController ()
 
-#warning (nonatomic, weak)
-@property (weak, nonatomic) IBOutlet UIButton *saveBtn;
-#warning методы можно не писать здесь
-- (IBAction)save:(UIButton *)sender;
-- (IBAction)cancel:(UIButton *)sender;
-@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+@property (nonatomic, weak) IBOutlet UITextField *titleTextField;
 
 @end
 
@@ -67,16 +55,13 @@
     [NDDataValidator isValidModelTitle:title error:&error];
     
     if (error) {
-        [self showAlert:nil text:[NSString stringWithFormat:@"%@ %@", [error localizedFailureReason], [error localizedRecoverySuggestion]] sourceView:self.titleTextField];
+        [self showAlert:@"Error" text:[NSString stringWithFormat:@"%@ %@", [error localizedFailureReason], [error localizedRecoverySuggestion]]];
     } else {
-#warning эти штуки можно задавать в методе фабрики, если юзер пытается создать модель без картинки
-        UIImage *image = [UIImage imageNamed:@"no_image"];
-        image.accessibilityIdentifier = @"no_image";
         NDDataSource *dataSource = [[NDDataSource alloc] init];
         NSError *error = nil;
-        [dataSource putNamedImagesFromPlist:[NDNamedImageFactory createObject:image name:title] error:&error];
+        [dataSource saveNamedImageToPlist:[NDNamedImageFactory namedImageObjectWithImage:nil name:title] error:&error];
         if (error) {
-            [self showAlert:@"Error" text:[error localizedDescription] sourceView:self.saveBtn];
+            [self showAlert:@"Error" text:[error localizedDescription]];
         } else {
             [self dismissViewControllerAnimated:YES completion:nil];
         }

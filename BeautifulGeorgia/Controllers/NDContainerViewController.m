@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 Hope. All rights reserved.
 //
 
-//controllers
 #import "NDContainerViewController.h"
 #import "NDCollectionViewController.h"
 #import "NDTableViewController.h"
@@ -16,13 +15,9 @@
 
 @interface NDContainerViewController ()
 
-#warning это можно удалить
-- (IBAction)switchView:(UIBarButtonItem *)sender;
-
-#warning (nonatomic, stromg)
-@property (strong, nonatomic) UIViewController *currentViewController;
-@property (strong, nonatomic) UIViewController *nextViewController;
-@property (assign, nonatomic) BOOL transitionInProgress;
+@property (nonatomic, strong) UIViewController *currentViewController;
+@property (nonatomic, strong) UIViewController *nextViewController;
+@property (nonatomic, assign) BOOL transitionInProgress;
 
 @end
 

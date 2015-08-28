@@ -11,9 +11,8 @@
 
 @interface NDTableViewCell ()
 
-#warning (nonatomic, weak)
-@property (weak, nonatomic) IBOutlet UIImageView *imgView;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *imgView;
+@property (nonatomic, weak) IBOutlet UILabel *titleLabel;
 
 @end
 
@@ -26,7 +25,7 @@
     [super setSelected:selected animated:animated];
 }
 
-- (void)fill:(NDNamedImageModel *)model {
+- (void)fillWithNamedImage:(NDNamedImageModel *)model {
     self.imgView.image = model.image;
     self.titleLabel.text = model.name;
 }

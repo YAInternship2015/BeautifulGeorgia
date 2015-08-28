@@ -12,9 +12,9 @@
 
 @interface NDNamedImageModel : NSObject
 
-@property (strong, nonatomic, readonly) NSString *name;
-@property (strong, nonatomic, readonly) UIImage *image;
+@property (nonatomic, strong, readonly) NSString *name;
+@property (nonatomic, strong, readonly) UIImage *image;
 
-+ (id)imageWithName:(UIImage*)image withName:(NSString *)name;
++ (id)imageWithName:(UIImage *)image withName:(NSString *)name;
 
 @end

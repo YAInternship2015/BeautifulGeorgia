@@ -11,13 +11,13 @@
 
 @interface NDCollectionViewCell ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *imgView;
+@property (nonatomic, weak) IBOutlet UIImageView *imgView;
 
 @end
 
 @implementation NDCollectionViewCell
 
-- (void)fill:(NDNamedImageModel *)model {
+- (void)fillWithNamedImage:(NDNamedImageModel *)model {
     self.imgView.image = model.image;
 }
 

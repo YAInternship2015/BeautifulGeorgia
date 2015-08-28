@@ -10,11 +10,13 @@
 #import "NDDataSource.h"
 #import "NDNamedImageModel.h"
 #import "NDNamedImageFactory.h"
+#import "NSFileManager+NDFilePath.h"
 
 NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFileContentDidChangeNotification";
 
 @interface NDDataSource ()
-@property (strong, nonatomic) NSMutableArray *array;
+@property (nonatomic, weak) id <NDDataSourceDelegate> sourceDelegate;
+@property (nonatomic, strong) NSMutableArray *array;
 @end
 
 @implementation NDDataSource
@@ -22,7 +24,7 @@ NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFil
 - (instancetype)initWithDelegate:(id)delegate {
     self = [super init];
     if (self) {
-        self.array =  [NSMutableArray arrayWithArray:[NDDataSource getNamedImagesFromPlist]];
+        self.array =  [NSMutableArray arrayWithArray:[NDDataSource namedImagesFromPlist]];
         self.sourceDelegate = delegate;
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(reloadData:)
@@ -41,9 +43,9 @@ NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFil
     [self.sourceDelegate dataWasChanged];
 }
 
-+ (NSArray *)getNamedImagesFromPlist {
++ (NSArray *)namedImagesFromPlist {
     NSPropertyListFormat format;
-    NSString *plistPath = [self getPlistPath];
+    NSString *plistPath = [self plistPath];
     NSData *plistData = [[NSFileManager defaultManager] contentsAtPath:plistPath];
     NSError *theError = nil;
     NSArray *temp = (NSArray *) [NSPropertyListSerialization propertyListWithData:plistData options:0 format:&format error:&theError];
@@ -52,24 +54,23 @@ NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFil
         for (NSDictionary *dictionary in temp) {
             NSString *imageName = [dictionary objectForKey:@"imageName"];
             NSString *title = [dictionary objectForKey:@"title"];
-            NDNamedImageModel *model = [NDNamedImageFactory createObject:[UIImage imageNamed:imageName] name:title];
+            NDNamedImageModel *model = [NDNamedImageFactory namedImageObjectWithImage:[UIImage imageNamed:imageName] name:title];
             [resultArray addObject:model];
         }
     }
     return resultArray;
 }
 
-- (NSArray *)getNamedImages {
+- (NSArray *)namedImages {
     return self.array;
 }
 
-#warning этот метод надо переименовать, непонятно из имени, что он делает
-- (void)putNamedImagesFromPlist:(NDNamedImageModel *)model error:(NSError **)error {
+- (void)saveNamedImageToPlist:(NDNamedImageModel *)model error:(NSError **)error {
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                                 model.image.accessibilityIdentifier, @"imageName",
                                 model.name, @"title", nil];
     
-    NSString *plistPath = [NDDataSource getPlistPath];
+    NSString *plistPath = [NDDataSource plistPath];
     NSMutableArray *array = [NSMutableArray arrayWithContentsOfFile:plistPath];
     [array addObject:dictionary];
     
@@ -90,20 +91,8 @@ NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFil
     }
 }
 
-#warning опять же, "get" здесь лишнее. Также, этот метод дучше поместить в категорию NSFileManager, работа с файлами - это его тема
-+ (NSString *)getPlistPath {
-
-    NSError *error;
-    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
-
-    NSString *plistPath = [documentsDirectory stringByAppendingPathComponent:@"Data.plist"];
-    if (![[NSFileManager defaultManager] fileExistsAtPath: plistPath])
-    {
-        NSString *bundle = [[NSBundle mainBundle] pathForResource:@"Data" ofType:@"plist"];
-        [[NSFileManager defaultManager] copyItemAtPath:bundle toPath:plistPath error:&error];
-    }
-    return plistPath;
++ (NSString *)plistPath {
+    return [NSFileManager filePath:@"Data" type:@"plist"];;
 }
 
 @end

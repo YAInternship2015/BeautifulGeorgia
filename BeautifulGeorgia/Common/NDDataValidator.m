@@ -23,8 +23,7 @@
                                    NSLocalizedFailureReasonErrorKey: NSLocalizedString(@"The length of name is not valid.", nil),
                                    NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString(@"Please, enter name more than 3 symbols.", nil)
                                    };
-#warning domain в NSError - это что-то специфичное приложению, например @"com.beautifulGeorgia"
-        *error = [NSError errorWithDomain:@"nd" code:0 userInfo:userInfo];
+        *error = [NSError errorWithDomain:@"com.beautifulGeorgia" code:0 userInfo:userInfo];
     } else {
         isValid = YES;
     }

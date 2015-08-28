@@ -6,19 +6,10 @@
 //  Copyright (c) 2015 Hope. All rights reserved.
 //
 
-//controllers
 #import "NDCollectionViewController.h"
-
-//models
 #import "NDNamedImageModel.h"
-
-//sources
 #import "NDDataSource.h"
-
-//views
 #import "NDCollectionViewCell.h"
-
-//categories
 #import "UIViewController+NDErrorDisplaying.h"
 
 @interface NDCollectionViewController () <NDDataSourceDelegate>
@@ -33,7 +24,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataSource = [[NDDataSource alloc] initWithDelegate:self];
-    self.images = [self.dataSource getNamedImages];
+    self.images = [self.dataSource namedImages];
 }
 
 #pragma mark - NDDataSourceDelegate
@@ -51,7 +42,7 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     NDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"imageCell" forIndexPath:indexPath];
     NDNamedImageModel *model = [self.images objectAtIndex:indexPath.row];
-    [cell fill:model];
+    [cell fillWithNamedImage:model];
     return cell;
 }
 
@@ -61,7 +52,6 @@
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
-#warning для таких вычислений все же лучше создавать кастомный UICollectionViewFlowLayout, но, в принципе, сойдет
     CGFloat sectionInset = self.collectionViewFlowLayout.sectionInset.right + self.collectionViewFlowLayout.sectionInset.left;
     CGFloat minSpacingInset = self.collectionViewFlowLayout.minimumLineSpacing;
     

@@ -17,12 +17,10 @@ extern NSString *const NDDataSourceFileContentDidChangeNotification;
 @end
 
 @interface NDDataSource : NSObject
-#warning зачем это свойтсво в *.h файле? Также, оно должнл быть (nonatomic, weak)
-@property (nonatomic, assign) id <NDDataSourceDelegate> sourceDelegate;
+
 - (instancetype)initWithDelegate:(id)delegate;
 
-#warning get в имени геттера не нужен
-- (NSArray *)getNamedImages;
-- (void)putNamedImagesFromPlist:(NDNamedImageModel *)model error:(NSError **)error;
+- (NSArray *)namedImages;
+- (void)saveNamedImageToPlist:(NDNamedImageModel *)model error:(NSError **)error;
 
 @end

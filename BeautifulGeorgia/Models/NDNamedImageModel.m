@@ -10,17 +10,15 @@
 
 @interface NDNamedImageModel ()
 
-@property (strong, nonatomic, readwrite) NSString *name;
-@property (strong, nonatomic, readwrite) UIImage *image;
+@property (nonatomic, strong, readwrite) NSString *name;
+@property (nonatomic, strong, readwrite) UIImage *image;
 
 @end
 
 @implementation NDNamedImageModel
 
-#warning + (id)imageWithName:(UIImage *)image withName:(NSString *)name {
-+ (id)imageWithName:(UIImage*)image withName:(NSString *)name {
-#warning     NDNamedImageModel *obj = [[NDNamedImageModel alloc] init];
-    NDNamedImageModel* obj = [[NDNamedImageModel alloc] init];
++ (id)imageWithName:(UIImage *)image withName:(NSString *)name {
+    NDNamedImageModel *obj = [[NDNamedImageModel alloc] init];
     if (obj) {
         obj.name = name;
         obj.image = image;

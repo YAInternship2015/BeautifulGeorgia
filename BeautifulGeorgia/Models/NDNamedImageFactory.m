@@ -6,15 +6,17 @@
 //  Copyright (c) 2015 Hope. All rights reserved.
 //
 
-//controllers
+#import <UIKit/UIKit.h>
 #import "NDNamedImageFactory.h"
-
-//models
 #import "NDNamedImageModel.h"
 
 @implementation NDNamedImageFactory
 
-+ (NDNamedImageModel *)createObject:(UIImage *)image name:(NSString *)name {
++ (NDNamedImageModel *)namedImageObjectWithImage:(UIImage *)image name:(NSString *)name {
+    if (!image) {
+        image = [UIImage imageNamed:@"no_image"];
+        image.accessibilityIdentifier = @"no_image";
+    }
     return [NDNamedImageModel imageWithName:image withName:name];
 }
 

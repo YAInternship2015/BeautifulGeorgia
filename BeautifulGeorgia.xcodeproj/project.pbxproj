@@ -14,6 +14,7 @@
 		8576E1041B8A249D00A08A45 /* NDStoryboardSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E1031B8A249D00A08A45 /* NDStoryboardSegue.m */; };
 		8576E1071B8A284600A08A45 /* NDContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E1061B8A284600A08A45 /* NDContainerViewController.m */; };
 		8576E10A1B8DF0BA00A08A45 /* NDAddItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E1091B8DF0BA00A08A45 /* NDAddItemViewController.m */; };
+		858A32711B91043B00A19DCD /* NSFileManager+NDFilePath.m in Sources */ = {isa = PBXBuildFile; fileRef = 858A32701B91043B00A19DCD /* NSFileManager+NDFilePath.m */; };
 		85B398D91B8F21020012587F /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85B398D81B8F21020012587F /* Data.plist */; };
 		85B398E01B8F63500012587F /* UIViewController+NDErrorDisplaying.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B398DF1B8F63500012587F /* UIViewController+NDErrorDisplaying.m */; };
 		85B398E41B8F640B0012587F /* NDNamedImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85B398E31B8F640B0012587F /* NDNamedImageModel.m */; };
@@ -53,6 +54,8 @@
 		8576E1061B8A284600A08A45 /* NDContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDContainerViewController.m; sourceTree = "<group>"; };
 		8576E1081B8DF0BA00A08A45 /* NDAddItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDAddItemViewController.h; sourceTree = "<group>"; };
 		8576E1091B8DF0BA00A08A45 /* NDAddItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAddItemViewController.m; sourceTree = "<group>"; };
+		858A326F1B91043B00A19DCD /* NSFileManager+NDFilePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+NDFilePath.h"; sourceTree = "<group>"; };
+		858A32701B91043B00A19DCD /* NSFileManager+NDFilePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+NDFilePath.m"; sourceTree = "<group>"; };
 		85B398D81B8F21020012587F /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Data.plist; sourceTree = "<group>"; };
 		85B398DE1B8F63500012587F /* UIViewController+NDErrorDisplaying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+NDErrorDisplaying.h"; sourceTree = "<group>"; };
 		85B398DF1B8F63500012587F /* UIViewController+NDErrorDisplaying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+NDErrorDisplaying.m"; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 			children = (
 				85B398DE1B8F63500012587F /* UIViewController+NDErrorDisplaying.h */,
 				85B398DF1B8F63500012587F /* UIViewController+NDErrorDisplaying.m */,
+				858A326F1B91043B00A19DCD /* NSFileManager+NDFilePath.h */,
+				858A32701B91043B00A19DCD /* NSFileManager+NDFilePath.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 			files = (
 				85D283E71B79454B00546367 /* NDAppDelegate.m in Sources */,
 				8576E1071B8A284600A08A45 /* NDContainerViewController.m in Sources */,
+				858A32711B91043B00A19DCD /* NSFileManager+NDFilePath.m in Sources */,
 				8576E0F81B87337A00A08A45 /* NDTableViewCell.m in Sources */,
 				85B398E01B8F63500012587F /* UIViewController+NDErrorDisplaying.m in Sources */,
 				8576E1011B8A1BA600A08A45 /* NDCollectionViewCell.m in Sources */,

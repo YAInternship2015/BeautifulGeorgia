@@ -13,7 +13,6 @@
 
 @interface NDNamedImageFactory : NSObject
 
-#warning неудачное имя для метода. лучше namedImageObjectWithImage:name:
-+ (NDNamedImageModel *)createObject:(UIImage *)image name:(NSString *)name;
++ (NDNamedImageModel *)namedImageObjectWithImage:(UIImage *)image name:(NSString *)name;
 
 @end

@@ -12,6 +12,6 @@
 
 @interface NDCollectionViewCell : UICollectionViewCell
 
-- (void)fill:(NDNamedImageModel *)model;
+- (void)fillWithNamedImage:(NDNamedImageModel *)model;
 
 @end
