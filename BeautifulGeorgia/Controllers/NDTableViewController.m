@@ -6,6 +6,7 @@
 //  Copyright (c) 2015 Hope. All rights reserved.
 //
 
+#warning не стоит так прямо комментировать все импорты
 //controllers
 #import "NDTableViewController.h"
 
@@ -23,6 +24,7 @@
 
 @interface NDTableViewController () <NDDataSourceDelegate>
 
+#warning (nonatomic, strong)
 @property (strong, nonatomic) NSArray *images;
 @property (strong, nonatomic) NDDataSource *dataSource;
 

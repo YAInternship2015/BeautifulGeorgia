@@ -17,7 +17,9 @@
 
 @implementation NDNamedImageModel
 
+#warning + (id)imageWithName:(UIImage *)image withName:(NSString *)name {
 + (id)imageWithName:(UIImage*)image withName:(NSString *)name {
+#warning     NDNamedImageModel *obj = [[NDNamedImageModel alloc] init];
     NDNamedImageModel* obj = [[NDNamedImageModel alloc] init];
     if (obj) {
         obj.name = name;

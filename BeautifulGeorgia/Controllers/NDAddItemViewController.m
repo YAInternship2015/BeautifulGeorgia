@@ -21,7 +21,9 @@
 
 @interface NDAddItemViewController ()
 
+#warning (nonatomic, weak)
 @property (weak, nonatomic) IBOutlet UIButton *saveBtn;
+#warning методы можно не писать здесь
 - (IBAction)save:(UIButton *)sender;
 - (IBAction)cancel:(UIButton *)sender;
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
@@ -67,6 +69,7 @@
     if (error) {
         [self showAlert:nil text:[NSString stringWithFormat:@"%@ %@", [error localizedFailureReason], [error localizedRecoverySuggestion]] sourceView:self.titleTextField];
     } else {
+#warning эти штуки можно задавать в методе фабрики, если юзер пытается создать модель без картинки
         UIImage *image = [UIImage imageNamed:@"no_image"];
         image.accessibilityIdentifier = @"no_image";
         NDDataSource *dataSource = [[NDDataSource alloc] init];

@@ -63,6 +63,7 @@ NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFil
     return self.array;
 }
 
+#warning этот метод надо переименовать, непонятно из имени, что он делает
 - (void)putNamedImagesFromPlist:(NDNamedImageModel *)model error:(NSError **)error {
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                                 model.image.accessibilityIdentifier, @"imageName",
@@ -89,6 +90,7 @@ NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFil
     }
 }
 
+#warning опять же, "get" здесь лишнее. Также, этот метод дучше поместить в категорию NSFileManager, работа с файлами - это его тема
 + (NSString *)getPlistPath {
 
     NSError *error;

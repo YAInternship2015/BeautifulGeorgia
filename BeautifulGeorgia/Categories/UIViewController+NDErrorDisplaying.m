@@ -12,14 +12,17 @@ NSString *const NDErrorDisplayingDidPressActionNotification = @"NDErrorDisplayin
 
 @implementation UIViewController (NDErrorDisplaying)
 
+#warning ActionSheet предназначен для других целей. Для отображения ошибок из нативных средств используют этот же UIAlertController, но стиля UIAlertControllerStyleAlert (до ios 8 это был UIAlertView)
 - (void)showAlert:(NSString *)title
              text:(NSString *)text
        sourceView:(UIView *)sourceView {
+#warning правильнее писать UIAlertController *alert
     UIAlertController * alert =  [UIAlertController
                                   alertControllerWithTitle:title
                                   message:text
                                   preferredStyle:UIAlertControllerStyleActionSheet];
     
+#warning смотрите замечание выше
     UIAlertAction* ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault
                                                handler:^(UIAlertAction * action) {
                                                    [[NSNotificationCenter defaultCenter] postNotificationName:NDErrorDisplayingDidPressActionNotification object:action];

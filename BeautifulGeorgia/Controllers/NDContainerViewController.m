@@ -16,8 +16,10 @@
 
 @interface NDContainerViewController ()
 
+#warning это можно удалить
 - (IBAction)switchView:(UIBarButtonItem *)sender;
 
+#warning (nonatomic, stromg)
 @property (strong, nonatomic) UIViewController *currentViewController;
 @property (strong, nonatomic) UIViewController *nextViewController;
 @property (assign, nonatomic) BOOL transitionInProgress;

@@ -61,6 +61,7 @@
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     
+#warning для таких вычислений все же лучше создавать кастомный UICollectionViewFlowLayout, но, в принципе, сойдет
     CGFloat sectionInset = self.collectionViewFlowLayout.sectionInset.right + self.collectionViewFlowLayout.sectionInset.left;
     CGFloat minSpacingInset = self.collectionViewFlowLayout.minimumLineSpacing;
     

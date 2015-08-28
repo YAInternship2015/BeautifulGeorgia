@@ -12,6 +12,7 @@
 
 @interface NDTableViewCell : UITableViewCell
 
+#warning хочется здесь видет более "говорящее" имя метода, вроде fillWithNamedImage:. То же самое в CollectionViewCell
 - (void)fill:(NDNamedImageModel *)model;
 
 @end
