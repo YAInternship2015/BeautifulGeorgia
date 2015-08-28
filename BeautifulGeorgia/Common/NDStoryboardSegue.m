@@ -10,8 +10,7 @@
 
 @implementation NDStoryboardSegue
 
-- (void)perform
-{
+- (void)perform {
     // Nothing. The ContainerViewController class handles all of the view
     // controller action.
 }

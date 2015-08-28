@@ -18,9 +18,13 @@
 //sources
 #import "NDDataSource.h"
 
-@interface NDTableViewController ()
+//categories
+#import "UIViewController+NDErrorDisplaying.h"
+
+@interface NDTableViewController () <NDDataSourceDelegate>
 
 @property (strong, nonatomic) NSArray *images;
+@property (strong, nonatomic) NDDataSource *dataSource;
 
 @end
 
@@ -28,7 +32,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.images = [NDDataSource getNamedImages];
+    self.dataSource = [[NDDataSource alloc] initWithDelegate:self];
+    self.images = [self.dataSource getNamedImages];
+}
+
+#pragma mark - NDDataSourceDelegate
+
+- (void)dataWasChanged {
+    [self.tableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource

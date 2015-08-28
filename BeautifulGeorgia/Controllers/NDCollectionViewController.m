@@ -18,24 +18,28 @@
 //views
 #import "NDCollectionViewCell.h"
 
-@interface NDCollectionViewController ()
+//categories
+#import "UIViewController+NDErrorDisplaying.h"
+
+@interface NDCollectionViewController () <NDDataSourceDelegate>
 
 @property (strong, nonatomic) NSArray *images;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *collectionViewFlowLayout;
+@property (strong, nonatomic) NDDataSource *dataSource;
 @end
 
 @implementation NDCollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.images = [NDDataSource getNamedImages];
+    self.dataSource = [[NDDataSource alloc] initWithDelegate:self];
+    self.images = [self.dataSource getNamedImages];
 }
 
+#pragma mark - NDDataSourceDelegate
 
-#pragma mark - Navigation
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-
+- (void)dataWasChanged {
+    [self.collectionView reloadData];
 }
 
 #pragma mark <UICollectionViewDataSource>
@@ -97,36 +101,5 @@
          [self.collectionView performBatchUpdates:nil completion:nil];
      } completion:nil];
 }
-
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

@@ -12,9 +12,6 @@
 
 @interface NDTableViewCell : UITableViewCell
 
-//@property (weak, nonatomic) IBOutlet UIImageView *imgView;
-//@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
-
 - (void)fill:(NDNamedImageModel *)model;
 
 @end
