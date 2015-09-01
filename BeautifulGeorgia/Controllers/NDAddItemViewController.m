@@ -55,6 +55,7 @@
     [NDDataValidator isValidModelTitle:title error:&error];
     
     if (error) {
+#warning текст "Error" надо вынести в localizable.strings. Вообще все тексты, которые создаются в коде, и которые увидит юзер в UI, необходимо помещать в этот файл
         [self showAlert:@"Error" text:[NSString stringWithFormat:@"%@ %@", [error localizedFailureReason], [error localizedRecoverySuggestion]]];
     } else {
         NDDataSource *dataSource = [[NDDataSource alloc] init];

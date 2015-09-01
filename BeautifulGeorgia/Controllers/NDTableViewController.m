@@ -14,6 +14,7 @@
 
 @interface NDTableViewController () <NDDataSourceDelegate>
 
+#warning этот массив здесь не нужен, он может хранить неактуальные данные, которые в датасорсе уже изсенились. С новым интерфейсом датасорса в этом массиве нет надобности. Это касается и NDCollectionViewController
 @property (nonatomic, strong) NSArray *images;
 @property (nonatomic, strong) NDDataSource *dataSource;
 

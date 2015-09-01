@@ -39,10 +39,12 @@ NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFil
 }
 
 - (void)reloadData:(NSNotification *)notification {
+#warning пока у нас есть только добавление данных, такой подход работает. Если же появится редактирование/удаление, то addObject: все испортит. Достаточно просто перезагрузить данные из файла в массив
     [self.array addObject:[notification object]];
     [self.sourceDelegate dataWasChanged];
 }
 
+#warning зачем этот метод делать статическим?
 + (NSArray *)namedImagesFromPlist {
     NSPropertyListFormat format;
     NSString *plistPath = [self plistPath];

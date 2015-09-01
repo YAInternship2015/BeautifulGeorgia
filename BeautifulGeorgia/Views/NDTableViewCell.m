@@ -18,6 +18,7 @@
 
 @implementation NDTableViewCell
 
+#warning этот и следующий методы можно удалить, Вы в них ничего не изменили по сравнению с реализацией по умолчанию
 - (void)awakeFromNib {
 }
 

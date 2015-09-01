@@ -19,6 +19,7 @@
 
 + (id)imageWithName:(UIImage *)image withName:(NSString *)name {
     NDNamedImageModel *obj = [[NDNamedImageModel alloc] init];
+#warning можно обойтись и без if. Если вдруг предыдущий вызов вернул nil, то ничего в этом страшного нет. nil отвечает на любые селекторы и приложение не упадет
     if (obj) {
         obj.name = name;
         obj.image = image;

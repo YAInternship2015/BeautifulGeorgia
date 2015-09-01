@@ -15,6 +15,7 @@
 @property (nonatomic, strong, readonly) NSString *name;
 @property (nonatomic, strong, readonly) UIImage *image;
 
+#warning вместо типа id лучше возвращать тип instancetype. Также имя метода мне не нравится. Следует избегать использования предлогов во втором, третьем и т.д. параметрах. Лучше как-то так + namedImageWithName:imageName:
 + (id)imageWithName:(UIImage *)image withName:(NSString *)name;
 
 @end
