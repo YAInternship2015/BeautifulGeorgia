@@ -7,8 +7,7 @@
 //
 
 #import "UIViewController+NDErrorDisplaying.h"
-
-NSString *const NDErrorDisplayingDidPressActionNotification = @"NDErrorDisplayingDidPressActionNotification";
+#import "NDNotification.h"
 
 @implementation UIViewController (NDErrorDisplaying)
 
@@ -20,7 +19,7 @@ NSString *const NDErrorDisplayingDidPressActionNotification = @"NDErrorDisplayin
                                   message:text
                                   preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:NSLocalizedString(@"OkeyKey", nil) style:UIAlertActionStyleDefault
                                                handler:^(UIAlertAction * action) {
                                                    [[NSNotificationCenter defaultCenter] postNotificationName:NDErrorDisplayingDidPressActionNotification object:action];
                                                }];

@@ -53,8 +53,7 @@
 }
 
 - (void)swapViewController:(UIViewController *)fromViewController toViewController:(UIViewController *)toViewController {
-#warning вместо CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height) можно писать self.view.bounds
-    toViewController.view.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    toViewController.view.frame = self.view.bounds;
     [fromViewController willMoveToParentViewController:nil];
     [self addChildViewController:toViewController];
     [self transitionFromViewController:fromViewController toViewController:toViewController duration:1.0 options:UIViewAnimationOptionTransitionCrossDissolve animations:nil completion:^(BOOL finished) {

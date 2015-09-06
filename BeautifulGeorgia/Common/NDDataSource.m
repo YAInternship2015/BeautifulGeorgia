@@ -11,12 +11,13 @@
 #import "NDNamedImageModel.h"
 #import "NDNamedImageFactory.h"
 #import "NSFileManager+NDFilePath.h"
-
-NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFileContentDidChangeNotification";
+#import "NDNotification.h"
 
 @interface NDDataSource ()
+
 @property (nonatomic, weak) id <NDDataSourceDelegate> sourceDelegate;
-@property (nonatomic, strong) NSMutableArray *array;
+@property (nonatomic, strong) NSMutableArray *objects;
+
 @end
 
 @implementation NDDataSource
@@ -24,7 +25,7 @@ NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFil
 - (instancetype)initWithDelegate:(id)delegate {
     self = [super init];
     if (self) {
-        self.array =  [NSMutableArray arrayWithArray:[NDDataSource namedImagesFromPlist]];
+        self.objects =  [NSMutableArray arrayWithArray:[self namedImages]];
         self.sourceDelegate = delegate;
         [[NSNotificationCenter defaultCenter] addObserver:self
                                                  selector:@selector(reloadData:)
@@ -39,15 +40,14 @@ NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFil
 }
 
 - (void)reloadData:(NSNotification *)notification {
-#warning пока у нас есть только добавление данных, такой подход работает. Если же появится редактирование/удаление, то addObject: все испортит. Достаточно просто перезагрузить данные из файла в массив
-    [self.array addObject:[notification object]];
+    self.objects = [NSMutableArray arrayWithArray:[self namedImages]];
     [self.sourceDelegate dataWasChanged];
 }
 
-#warning зачем этот метод делать статическим?
-+ (NSArray *)namedImagesFromPlist {
+
+- (NSArray *)namedImages {
     NSPropertyListFormat format;
-    NSString *plistPath = [self plistPath];
+    NSString *plistPath = [NDDataSource plistPath];
     NSData *plistData = [[NSFileManager defaultManager] contentsAtPath:plistPath];
     NSError *theError = nil;
     NSArray *temp = (NSArray *) [NSPropertyListSerialization propertyListWithData:plistData options:0 format:&format error:&theError];
@@ -63,11 +63,15 @@ NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFil
     return resultArray;
 }
 
-- (NSArray *)namedImages {
-    return self.array;
+- (NSUInteger)numberOfObjects {
+    return [self.objects count];
 }
 
-- (void)saveNamedImageToPlist:(NDNamedImageModel *)model error:(NSError **)error {
+- (id)objectAtIndex:(NSUInteger)index{
+    return [self.objects objectAtIndex:index];
+}
+
+- (void)saveNamedImage:(NDNamedImageModel *)model error:(NSError **)error {
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                                 model.image.accessibilityIdentifier, @"imageName",
                                 model.name, @"title", nil];

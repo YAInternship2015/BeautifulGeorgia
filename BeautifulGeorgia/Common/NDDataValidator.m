@@ -19,9 +19,9 @@
     
     if (title.length < MIN_LENGTH) {
         NSDictionary *userInfo = @{
-                                   NSLocalizedDescriptionKey: NSLocalizedString(@"Operation was unsuccessful.", nil),
-                                   NSLocalizedFailureReasonErrorKey: NSLocalizedString(@"The length of name is not valid.", nil),
-                                   NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString(@"Please, enter name more than 3 symbols.", nil)
+                                   NSLocalizedDescriptionKey: NSLocalizedString(@"DescriptionKey", nil),
+                                   NSLocalizedFailureReasonErrorKey: NSLocalizedString(@"ReasonErrorKey", nil),
+                                   NSLocalizedRecoverySuggestionErrorKey: NSLocalizedString(@"SuggestionErrorKey", nil)
                                    };
         *error = [NSError errorWithDomain:@"com.beautifulGeorgia" code:0 userInfo:userInfo];
     } else {

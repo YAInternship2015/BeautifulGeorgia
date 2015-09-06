@@ -17,7 +17,7 @@
         image = [UIImage imageNamed:@"no_image"];
         image.accessibilityIdentifier = @"no_image";
     }
-    return [NDNamedImageModel imageWithName:image withName:name];
+    return [NDNamedImageModel imageWithName:image imageName:name];
 }
 
 @end

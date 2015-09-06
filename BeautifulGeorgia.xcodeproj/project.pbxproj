@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8549039B1B9CDE55002CF973 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8549039A1B9CDE55002CF973 /* Localizable.strings */; };
+		8549039D1B9CDFB7002CF973 /* NDNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549039C1B9CDFB7002CF973 /* NDNotification.m */; };
 		8576E0F81B87337A00A08A45 /* NDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E0F71B87337A00A08A45 /* NDTableViewCell.m */; };
 		8576E0FB1B87378700A08A45 /* NDDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E0FA1B87378700A08A45 /* NDDataSource.m */; };
 		8576E0FE1B8A1AEC00A08A45 /* NDCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E0FD1B8A1AEC00A08A45 /* NDCollectionViewController.m */; };
@@ -40,6 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		854903991B9CD7EF002CF973 /* NDNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDNotification.h; sourceTree = "<group>"; };
+		8549039A1B9CDE55002CF973 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		8549039C1B9CDFB7002CF973 /* NDNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDNotification.m; sourceTree = "<group>"; };
 		8576E0F61B87337A00A08A45 /* NDTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDTableViewCell.h; sourceTree = "<group>"; };
 		8576E0F71B87337A00A08A45 /* NDTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDTableViewCell.m; sourceTree = "<group>"; };
 		8576E0F91B87378700A08A45 /* NDDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDDataSource.h; sourceTree = "<group>"; };
@@ -141,6 +146,7 @@
 		85D283B41B7944BF00546367 /* BeautifulGeorgia */ = {
 			isa = PBXGroup;
 			children = (
+				8549039A1B9CDE55002CF973 /* Localizable.strings */,
 				85B398D81B8F21020012587F /* Data.plist */,
 				85D283B61B7944BF00546367 /* Info.plist */,
 				85D283B71B7944BF00546367 /* main.m */,
@@ -176,6 +182,8 @@
 		85D283DB1B79454B00546367 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				854903991B9CD7EF002CF973 /* NDNotification.h */,
+				8549039C1B9CDFB7002CF973 /* NDNotification.m */,
 				85D283DC1B79454B00546367 /* NDAppDelegate.h */,
 				85D283DD1B79454B00546367 /* NDAppDelegate.m */,
 				8576E0F91B87378700A08A45 /* NDDataSource.h */,
@@ -294,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8549039B1B9CDE55002CF973 /* Localizable.strings in Resources */,
 				85D283C11B7944BF00546367 /* Main.storyboard in Resources */,
 				85D283C61B7944BF00546367 /* LaunchScreen.xib in Resources */,
 				85D283C31B7944BF00546367 /* Images.xcassets in Resources */,
@@ -319,6 +328,7 @@
 				8576E1071B8A284600A08A45 /* NDContainerViewController.m in Sources */,
 				858A32711B91043B00A19DCD /* NSFileManager+NDFilePath.m in Sources */,
 				8576E0F81B87337A00A08A45 /* NDTableViewCell.m in Sources */,
+				8549039D1B9CDFB7002CF973 /* NDNotification.m in Sources */,
 				85B398E01B8F63500012587F /* UIViewController+NDErrorDisplaying.m in Sources */,
 				8576E1011B8A1BA600A08A45 /* NDCollectionViewCell.m in Sources */,
 				8576E0FB1B87378700A08A45 /* NDDataSource.m in Sources */,

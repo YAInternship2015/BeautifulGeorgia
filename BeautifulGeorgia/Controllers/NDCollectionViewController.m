@@ -14,7 +14,6 @@
 
 @interface NDCollectionViewController () <NDDataSourceDelegate>
 
-@property (strong, nonatomic) NSArray *images;
 @property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *collectionViewFlowLayout;
 @property (strong, nonatomic) NDDataSource *dataSource;
 @end
@@ -24,7 +23,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.dataSource = [[NDDataSource alloc] initWithDelegate:self];
-    self.images = [self.dataSource namedImages];
 }
 
 #pragma mark - NDDataSourceDelegate
@@ -36,12 +34,12 @@
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.images count];
+    return [self.dataSource numberOfObjects];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     NDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"imageCell" forIndexPath:indexPath];
-    NDNamedImageModel *model = [self.images objectAtIndex:indexPath.row];
+    NDNamedImageModel *model = [self.dataSource objectAtIndex:indexPath.row];
     [cell fillWithNamedImage:model];
     return cell;
 }

@@ -10,8 +10,6 @@
 
 @interface UIViewController (NDErrorDisplaying)
 
-extern NSString *const NDErrorDisplayingDidPressActionNotification;
-
 - (void)showAlert:(NSString *)title
              text:(NSString *)text;
 

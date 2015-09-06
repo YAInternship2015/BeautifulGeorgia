@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  BeautifulGeorgia
+
+  Created by Nadiia Dovbysh on 9/6/15.
+  Copyright (c) 2015 Hope. All rights reserved.
+*/
+
+"OkeyKey" = "Ok";
+"ErrorTitleKey" = "Error";
+"DescriptionKey" = "Operation was unsuccessful.";
+"ReasonErrorKey" = "The length of name is not valid.";
+"SuggestionErrorKey" = "Please, enter name more than 3 symbols.";

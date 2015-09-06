@@ -11,6 +11,7 @@
 #import "NDDataSource.h"
 #import "NDDataValidator.h"
 #import "NDNamedImageFactory.h"
+#import "NDNotification.h"
 
 @interface NDAddItemViewController ()
 
@@ -55,14 +56,13 @@
     [NDDataValidator isValidModelTitle:title error:&error];
     
     if (error) {
-#warning текст "Error" надо вынести в localizable.strings. Вообще все тексты, которые создаются в коде, и которые увидит юзер в UI, необходимо помещать в этот файл
-        [self showAlert:@"Error" text:[NSString stringWithFormat:@"%@ %@", [error localizedFailureReason], [error localizedRecoverySuggestion]]];
+        [self showAlert:NSLocalizedString(@"ErrorTitleKey", nil) text:[NSString stringWithFormat:@"%@ %@", [error localizedFailureReason], [error localizedRecoverySuggestion]]];
     } else {
         NDDataSource *dataSource = [[NDDataSource alloc] init];
         NSError *error = nil;
-        [dataSource saveNamedImageToPlist:[NDNamedImageFactory namedImageObjectWithImage:nil name:title] error:&error];
+        [dataSource saveNamedImage:[NDNamedImageFactory namedImageObjectWithImage:nil name:title] error:&error];
         if (error) {
-            [self showAlert:@"Error" text:[error localizedDescription]];
+            [self showAlert:NSLocalizedString(@"ErrorTitleKey", nil) text:[error localizedDescription]];
         } else {
             [self dismissViewControllerAnimated:YES completion:nil];
         }

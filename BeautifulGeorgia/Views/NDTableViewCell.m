@@ -18,14 +18,6 @@
 
 @implementation NDTableViewCell
 
-#warning этот и следующий методы можно удалить, Вы в них ничего не изменили по сравнению с реализацией по умолчанию
-- (void)awakeFromNib {
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-}
-
 - (void)fillWithNamedImage:(NDNamedImageModel *)model {
     self.imgView.image = model.image;
     self.titleLabel.text = model.name;
