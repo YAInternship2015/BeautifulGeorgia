@@ -8,6 +8,8 @@
 
 #import "NDDataValidator.h"
 
+#warning вместо define лучше использовать константы, например
+// static const NSInteger kTitleMaxLength = 20;
 #define MAX_LENGTH 20
 #define MIN_LENGTH 3
 

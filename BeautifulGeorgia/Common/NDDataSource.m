@@ -15,6 +15,7 @@
 
 @interface NDDataSource ()
 
+#warning id<NDDataSourceDelegate>
 @property (nonatomic, weak) id <NDDataSourceDelegate> sourceDelegate;
 @property (nonatomic, strong) NSMutableArray *objects;
 
@@ -72,6 +73,7 @@
 }
 
 - (void)saveNamedImage:(NDNamedImageModel *)model error:(NSError **)error {
+#warning преобразование модели в NSDictionary должно быть реализовано в категории модели в методе, скажем, dictionaryRepresentation
     NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
                                 model.image.accessibilityIdentifier, @"imageName",
                                 model.name, @"title", nil];

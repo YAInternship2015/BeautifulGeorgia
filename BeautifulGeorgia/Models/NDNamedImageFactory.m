@@ -14,6 +14,7 @@
 
 + (NDNamedImageModel *)namedImageObjectWithImage:(UIImage *)image name:(NSString *)name {
     if (!image) {
+#warning такой UIImage "по умолчанию" лучше вынести в категорию UIImage в метод, скажем, defaultImage
         image = [UIImage imageNamed:@"no_image"];
         image.accessibilityIdentifier = @"no_image";
     }

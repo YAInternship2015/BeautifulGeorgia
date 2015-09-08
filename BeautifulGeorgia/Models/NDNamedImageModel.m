@@ -10,6 +10,7 @@
 
 @interface NDNamedImageModel ()
 
+#warning readwrite можно не писать
 @property (nonatomic, strong, readwrite) NSString *name;
 @property (nonatomic, strong, readwrite) UIImage *image;
 
