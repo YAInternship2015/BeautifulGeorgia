@@ -8,10 +8,8 @@
 
 #import "NDDataValidator.h"
 
-#warning вместо define лучше использовать константы, например
-// static const NSInteger kTitleMaxLength = 20;
-#define MAX_LENGTH 20
-#define MIN_LENGTH 3
+static const NSInteger kTitleMaxLength = 20;
+static const NSInteger kTitleMinLength = 3;
 
 @implementation NDDataValidator
 
@@ -19,7 +17,7 @@
 
     BOOL isValid = NO;
     
-    if (title.length < MIN_LENGTH) {
+    if (title.length < kTitleMinLength) {
         NSDictionary *userInfo = @{
                                    NSLocalizedDescriptionKey: NSLocalizedString(@"DescriptionKey", nil),
                                    NSLocalizedFailureReasonErrorKey: NSLocalizedString(@"ReasonErrorKey", nil),
@@ -38,7 +36,7 @@
     NSUInteger replacementLength = [string length];
     NSUInteger rangeLength = range.length;
     NSUInteger newLength = length - rangeLength + replacementLength;
-    return newLength <= MAX_LENGTH;
+    return newLength <= kTitleMaxLength;
 }
 
 @end

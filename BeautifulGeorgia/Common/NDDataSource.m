@@ -12,11 +12,11 @@
 #import "NDNamedImageFactory.h"
 #import "NSFileManager+NDFilePath.h"
 #import "NDNotification.h"
+#import "NDNamedImageModel+NDModelRepresentation.h"
 
 @interface NDDataSource ()
 
-#warning id<NDDataSourceDelegate>
-@property (nonatomic, weak) id <NDDataSourceDelegate> sourceDelegate;
+@property (nonatomic, weak) id<NDDataSourceDelegate> sourceDelegate;
 @property (nonatomic, strong) NSMutableArray *objects;
 
 @end
@@ -73,19 +73,14 @@
 }
 
 - (void)saveNamedImage:(NDNamedImageModel *)model error:(NSError **)error {
-#warning преобразование модели в NSDictionary должно быть реализовано в категории модели в методе, скажем, dictionaryRepresentation
-    NSDictionary *dictionary = [NSDictionary dictionaryWithObjectsAndKeys:
-                                model.image.accessibilityIdentifier, @"imageName",
-                                model.name, @"title", nil];
-    
     NSString *plistPath = [NDDataSource plistPath];
     NSMutableArray *array = [NSMutableArray arrayWithContentsOfFile:plistPath];
-    [array addObject:dictionary];
+    [array addObject:[NDNamedImageModel dictionaryRepresentation:model]];
     
     NSError *theError = nil;
     NSData *plistData = [NSPropertyListSerialization dataWithPropertyList:array format:NSPropertyListBinaryFormat_v1_0 options:0 error:&theError];
     
-    if(plistData) {
+    if (plistData) {
         theError = nil;
         [plistData writeToFile:plistPath options:0 error:&theError];
         if (!theError) {

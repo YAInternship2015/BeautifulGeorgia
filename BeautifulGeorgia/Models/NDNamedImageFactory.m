@@ -9,14 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "NDNamedImageFactory.h"
 #import "NDNamedImageModel.h"
+#import "UIImage+NDDefaultImage.h"
 
 @implementation NDNamedImageFactory
 
 + (NDNamedImageModel *)namedImageObjectWithImage:(UIImage *)image name:(NSString *)name {
     if (!image) {
-#warning такой UIImage "по умолчанию" лучше вынести в категорию UIImage в метод, скажем, defaultImage
-        image = [UIImage imageNamed:@"no_image"];
-        image.accessibilityIdentifier = @"no_image";
+        image = [UIImage defaultImage];
     }
     return [NDNamedImageModel imageWithName:image imageName:name];
 }

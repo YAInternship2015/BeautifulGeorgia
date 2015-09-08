@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851D983B1B9F329C0010BCC7 /* UIImage+NDDefaultImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 851D983A1B9F329C0010BCC7 /* UIImage+NDDefaultImage.m */; };
+		851D983E1B9F47ED0010BCC7 /* NDNamedImageModel+NDModelRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = 851D983D1B9F47EC0010BCC7 /* NDNamedImageModel+NDModelRepresentation.m */; };
 		8549039B1B9CDE55002CF973 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8549039A1B9CDE55002CF973 /* Localizable.strings */; };
 		8549039D1B9CDFB7002CF973 /* NDNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 8549039C1B9CDFB7002CF973 /* NDNotification.m */; };
 		8576E0F81B87337A00A08A45 /* NDTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8576E0F71B87337A00A08A45 /* NDTableViewCell.m */; };
@@ -42,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		851D98391B9F329C0010BCC7 /* UIImage+NDDefaultImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+NDDefaultImage.h"; sourceTree = "<group>"; };
+		851D983A1B9F329C0010BCC7 /* UIImage+NDDefaultImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+NDDefaultImage.m"; sourceTree = "<group>"; };
+		851D983C1B9F47EC0010BCC7 /* NDNamedImageModel+NDModelRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NDNamedImageModel+NDModelRepresentation.h"; sourceTree = "<group>"; };
+		851D983D1B9F47EC0010BCC7 /* NDNamedImageModel+NDModelRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NDNamedImageModel+NDModelRepresentation.m"; sourceTree = "<group>"; };
 		854903991B9CD7EF002CF973 /* NDNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NDNotification.h; sourceTree = "<group>"; };
 		8549039A1B9CDE55002CF973 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		8549039C1B9CDFB7002CF973 /* NDNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDNotification.m; sourceTree = "<group>"; };
@@ -110,6 +116,10 @@
 				85B398DF1B8F63500012587F /* UIViewController+NDErrorDisplaying.m */,
 				858A326F1B91043B00A19DCD /* NSFileManager+NDFilePath.h */,
 				858A32701B91043B00A19DCD /* NSFileManager+NDFilePath.m */,
+				851D98391B9F329C0010BCC7 /* UIImage+NDDefaultImage.h */,
+				851D983A1B9F329C0010BCC7 /* UIImage+NDDefaultImage.m */,
+				851D983C1B9F47EC0010BCC7 /* NDNamedImageModel+NDModelRepresentation.h */,
+				851D983D1B9F47EC0010BCC7 /* NDNamedImageModel+NDModelRepresentation.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -330,11 +340,13 @@
 				8576E0F81B87337A00A08A45 /* NDTableViewCell.m in Sources */,
 				8549039D1B9CDFB7002CF973 /* NDNotification.m in Sources */,
 				85B398E01B8F63500012587F /* UIViewController+NDErrorDisplaying.m in Sources */,
+				851D983B1B9F329C0010BCC7 /* UIImage+NDDefaultImage.m in Sources */,
 				8576E1011B8A1BA600A08A45 /* NDCollectionViewCell.m in Sources */,
 				8576E0FB1B87378700A08A45 /* NDDataSource.m in Sources */,
 				85B398E71B8F84490012587F /* NDDataValidator.m in Sources */,
 				8576E0FE1B8A1AEC00A08A45 /* NDCollectionViewController.m in Sources */,
 				8576E1041B8A249D00A08A45 /* NDStoryboardSegue.m in Sources */,
+				851D983E1B9F47ED0010BCC7 /* NDNamedImageModel+NDModelRepresentation.m in Sources */,
 				85D283B81B7944BF00546367 /* main.m in Sources */,
 				85B398E41B8F640B0012587F /* NDNamedImageModel.m in Sources */,
 				8576E10A1B8DF0BA00A08A45 /* NDAddItemViewController.m in Sources */,
