@@ -30,9 +30,9 @@
 		85D283E91B79454B00546367 /* NDTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85D283E21B79454B00546367 /* NDTableViewController.m */; };
 		85E1FFD41BA5972A00881120 /* NDAppDelegate+MOC.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E1FFD31BA5972A00881120 /* NDAppDelegate+MOC.m */; };
 		85E1FFD71BA59DBF00881120 /* NDDataStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E1FFD61BA59DBF00881120 /* NDDataStorage.m */; };
-		85E1FFE31BA5A3E900881120 /* NDNamedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E1FFE21BA5A3E900881120 /* NDNamedImage.m */; };
 		85E1FFE61BA5A41A00881120 /* NDNamedImage+Create.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E1FFE51BA5A41A00881120 /* NDNamedImage+Create.m */; };
 		85E1FFE91BA6F78600881120 /* UIColor+NDCustomColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E1FFE81BA6F78600881120 /* UIColor+NDCustomColors.m */; };
+		85E1FFEC1BA738AC00881120 /* NDNamedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E1FFEB1BA738AC00881120 /* NDNamedImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,12 +89,12 @@
 		85E1FFD31BA5972A00881120 /* NDAppDelegate+MOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NDAppDelegate+MOC.m"; sourceTree = "<group>"; };
 		85E1FFD51BA59DBF00881120 /* NDDataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDDataStorage.h; sourceTree = "<group>"; };
 		85E1FFD61BA59DBF00881120 /* NDDataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDDataStorage.m; sourceTree = "<group>"; };
-		85E1FFE11BA5A3E900881120 /* NDNamedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NDNamedImage.h; path = ../../NDNamedImage.h; sourceTree = "<group>"; };
-		85E1FFE21BA5A3E900881120 /* NDNamedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NDNamedImage.m; path = ../../NDNamedImage.m; sourceTree = "<group>"; };
 		85E1FFE41BA5A41A00881120 /* NDNamedImage+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NDNamedImage+Create.h"; sourceTree = "<group>"; };
 		85E1FFE51BA5A41A00881120 /* NDNamedImage+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NDNamedImage+Create.m"; sourceTree = "<group>"; };
 		85E1FFE71BA6F78600881120 /* UIColor+NDCustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NDCustomColors.h"; sourceTree = "<group>"; };
 		85E1FFE81BA6F78600881120 /* UIColor+NDCustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NDCustomColors.m"; sourceTree = "<group>"; };
+		85E1FFEA1BA738AC00881120 /* NDNamedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDNamedImage.h; sourceTree = "<group>"; };
+		85E1FFEB1BA738AC00881120 /* NDNamedImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDNamedImage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +131,8 @@
 		85B398E11B8F640B0012587F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				85E1FFE11BA5A3E900881120 /* NDNamedImage.h */,
-				85E1FFE21BA5A3E900881120 /* NDNamedImage.m */,
+				85E1FFEA1BA738AC00881120 /* NDNamedImage.h */,
+				85E1FFEB1BA738AC00881120 /* NDNamedImage.m */,
 				85B398E81B8F8D720012587F /* NDNamedImageFactory.h */,
 				85B398E91B8F8D720012587F /* NDNamedImageFactory.m */,
 				85E1FFE41BA5A41A00881120 /* NDNamedImage+Create.h */,
@@ -351,11 +351,11 @@
 				85B398E01B8F63500012587F /* UIViewController+NDAlertDisplaying.m in Sources */,
 				851D983B1B9F329C0010BCC7 /* UIImage+NDDefaultImage.m in Sources */,
 				851D98411B9F4F060010BCC7 /* BeautifulGeorgia.xcdatamodeld in Sources */,
+				85E1FFEC1BA738AC00881120 /* NDNamedImage.m in Sources */,
 				8576E1011B8A1BA600A08A45 /* NDCollectionViewCell.m in Sources */,
 				85B398E71B8F84490012587F /* NDDataValidator.m in Sources */,
 				8576E0FE1B8A1AEC00A08A45 /* NDCollectionViewController.m in Sources */,
 				8576E1041B8A249D00A08A45 /* NDStoryboardSegue.m in Sources */,
-				85E1FFE31BA5A3E900881120 /* NDNamedImage.m in Sources */,
 				85E1FFE61BA5A41A00881120 /* NDNamedImage+Create.m in Sources */,
 				85E1FFD71BA59DBF00881120 /* NDDataStorage.m in Sources */,
 				85D283B81B7944BF00546367 /* main.m in Sources */,
