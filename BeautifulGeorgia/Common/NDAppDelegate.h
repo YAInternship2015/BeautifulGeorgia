@@ -10,7 +10,8 @@
 
 @interface NDAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, strong) UIWindow *window;
+@property (nonatomic, strong, readonly) NSManagedObjectContext *managedObjectContext;
 
 @end
 

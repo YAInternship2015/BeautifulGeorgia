@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class NDNamedImageModel;
+@class NDNamedImage;
 
 @interface NDCollectionViewCell : UICollectionViewCell
 
-- (void)fillWithNamedImage:(NDNamedImageModel *)model;
+- (void)fillWithNamedImage:(NDNamedImage *)model;
 
 @end

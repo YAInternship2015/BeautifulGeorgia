@@ -7,11 +7,11 @@
 //
 
 #import "NDAddItemViewController.h"
-#import "UIViewController+NDErrorDisplaying.h"
-#import "NDDataSource.h"
+#import "UIViewController+NDAlertDisplaying.h"
 #import "NDDataValidator.h"
 #import "NDNamedImageFactory.h"
 #import "NDNotification.h"
+#import "NDDataStorage.h"
 
 @interface NDAddItemViewController ()
 
@@ -56,13 +56,21 @@
     [NDDataValidator isValidModelTitle:title error:&error];
     
     if (error) {
-        [self showAlert:NSLocalizedString(@"ErrorTitleKey", nil) text:[NSString stringWithFormat:@"%@ %@", [error localizedFailureReason], [error localizedRecoverySuggestion]]];
+        NSString *errorText = [NSString stringWithFormat:@"%@ %@",
+                               [error localizedFailureReason],
+                               [error localizedRecoverySuggestion]];
+        [self showErrorAlertWithText:errorText onAccept:^{
+            [[NSNotificationCenter defaultCenter] postNotificationName:NDErrorDisplayingDidPressActionNotification object:nil];
+        }];
     } else {
-        NDDataSource *dataSource = [[NDDataSource alloc] init];
         NSError *error = nil;
-        [dataSource saveNamedImage:[NDNamedImageFactory namedImageObjectWithImage:nil name:title] error:&error];
+        NDDataStorage *dataStorage = [[NDDataStorage alloc] init];
+        [dataStorage saveNewObject:[NDNamedImageFactory namedImageObjectWithName:title image:nil] error:error];
         if (error) {
-            [self showAlert:NSLocalizedString(@"ErrorTitleKey", nil) text:[error localizedDescription]];
+            NSString *errorText = [error localizedDescription];
+            [self showErrorAlertWithText:errorText onAccept:^{
+                [[NSNotificationCenter defaultCenter] postNotificationName:NDErrorDisplayingDidPressActionNotification object:nil];
+            }];
         } else {
             [self dismissViewControllerAnimated:YES completion:nil];
         }

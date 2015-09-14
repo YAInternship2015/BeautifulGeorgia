@@ -7,7 +7,7 @@
 //
 
 #import "NDTableViewCell.h"
-#import "NDNamedImageModel.h"
+#import "NDNamedImage.h"
 
 @interface NDTableViewCell ()
 
@@ -18,8 +18,8 @@
 
 @implementation NDTableViewCell
 
-- (void)fillWithNamedImage:(NDNamedImageModel *)model {
-    self.imgView.image = model.image;
+- (void)fillWithNamedImage:(NDNamedImage *)model {
+    self.imgView.image = [UIImage imageWithData:model.image];
     self.titleLabel.text = model.name;
 }
 

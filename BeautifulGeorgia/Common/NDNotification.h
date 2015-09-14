@@ -11,7 +11,6 @@
 #ifndef BeautifulGeorgia_NDNotification_h
 #define BeautifulGeorgia_NDNotification_h
 
-extern NSString *const NDDataSourceFileContentDidChangeNotification;
 extern NSString *const NDErrorDisplayingDidPressActionNotification;
 
 #endif

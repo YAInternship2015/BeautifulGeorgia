@@ -1,0 +1,16 @@
+//
+//  BeautifulGeorgia-Prefix.pch
+//  BeautifulGeorgia
+//
+//  Created by Nadiia Dovbysh on 9/11/15.
+//  Copyright (c) 2015 Hope. All rights reserved.
+//
+
+#ifndef BeautifulGeorgia_BeautifulGeorgia_Prefix_pch
+#define BeautifulGeorgia_BeautifulGeorgia_Prefix_pch
+
+#import "NDAppDelegate.h"
+
+#define AppDelegate ((NDAppDelegate *)[[UIApplication sharedApplication] delegate])
+
+#endif

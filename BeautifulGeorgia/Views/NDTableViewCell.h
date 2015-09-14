@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class NDNamedImageModel;
+@class NDNamedImage;
 
 @interface NDTableViewCell : UITableViewCell
 
-- (void)fillWithNamedImage:(NDNamedImageModel *)model;
+- (void)fillWithNamedImage:(NDNamedImage *)model;
 
 @end

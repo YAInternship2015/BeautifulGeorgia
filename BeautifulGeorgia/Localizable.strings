@@ -6,8 +6,14 @@
   Copyright (c) 2015 Hope. All rights reserved.
 */
 
+"YesKey" = "Yes";
+"CancelKey" = "Cancel";
+"DeleteTitleKey" = "Confirm delete";
+"DeleteTextKey" = "Are you sure you want to delete this picture?";
 "OkeyKey" = "Ok";
 "ErrorTitleKey" = "Error";
 "DescriptionKey" = "Operation was unsuccessful.";
 "ReasonErrorKey" = "The length of name is not valid.";
 "SuggestionErrorKey" = "Please, enter name more than 3 symbols.";
+"FailInitAppDataKey" = "Failed to initialize the application's saved data.";
+"FailCreateAppDataKey" = "There was an error creating or loading the application's saved data.";

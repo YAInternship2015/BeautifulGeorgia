@@ -8,5 +8,4 @@
 
 #import "NDNotification.h"
 
-NSString *const NDDataSourceFileContentDidChangeNotification = @"NDDataSourceFileContentDidChangeNotification";
 NSString *const NDErrorDisplayingDidPressActionNotification = @"NDErrorDisplayingDidPressActionNotification";

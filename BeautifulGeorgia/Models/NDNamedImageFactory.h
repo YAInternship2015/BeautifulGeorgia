@@ -8,11 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@class NDNamedImageModel;
 @class UIImage;
+@class NDNamedImage;
 
 @interface NDNamedImageFactory : NSObject
 
-+ (NDNamedImageModel *)namedImageObjectWithImage:(UIImage *)image name:(NSString *)name;
++ (NDNamedImage *)namedImageObjectWithName:(NSString *)name image:(UIImage *)image;
 
 @end

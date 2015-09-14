@@ -7,7 +7,7 @@
 //
 
 #import "NDCollectionViewCell.h"
-#import "NDNamedImageModel.h"
+#import "NDNamedImage.h"
 
 @interface NDCollectionViewCell ()
 
@@ -17,8 +17,8 @@
 
 @implementation NDCollectionViewCell
 
-- (void)fillWithNamedImage:(NDNamedImageModel *)model {
-    self.imgView.image = model.image;
+- (void)fillWithNamedImage:(NDNamedImage *)model {
+    self.imgView.image = [UIImage imageWithData:model.image];
 }
 
 @end

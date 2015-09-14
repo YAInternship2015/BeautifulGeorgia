@@ -7,39 +7,52 @@
 //
 
 #import "NDCollectionViewController.h"
-#import "NDNamedImageModel.h"
-#import "NDDataSource.h"
 #import "NDCollectionViewCell.h"
-#import "UIViewController+NDErrorDisplaying.h"
+#import "UIViewController+NDAlertDisplaying.h"
+#import "NDDataStorage.h"
+#import <CoreData/NSFetchedResultsController.h>
 
-@interface NDCollectionViewController () <NDDataSourceDelegate>
+@interface NDCollectionViewController () <NSFetchedResultsControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UICollectionViewFlowLayout *collectionViewFlowLayout;
-@property (strong, nonatomic) NDDataSource *dataSource;
+@property (nonatomic, weak) IBOutlet UICollectionViewFlowLayout *collectionViewFlowLayout;
+@property (nonatomic, strong) NDDataStorage *dataStorage;
+@property (nonatomic, strong) NSMutableArray *itemChanges;
+
 @end
 
 @implementation NDCollectionViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.dataSource = [[NDDataSource alloc] initWithDelegate:self];
+    self.dataStorage = [[NDDataStorage alloc] initWithFetchedResultsControllerDelegate:self];
 }
 
-#pragma mark - NDDataSourceDelegate
-
-- (void)dataWasChanged {
-    [self.collectionView reloadData];
+- (IBAction)handleLongPressGestureRecognizer:(UILongPressGestureRecognizer *)sender {
+    CGPoint pressLocation = [sender locationInView:self.collectionView];
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:pressLocation];
+    if (sender.state == UIGestureRecognizerStateBegan && indexPath) {
+        [self showActionAlertWithTitle:(NSLocalizedString(@"DeleteTitleKey", nil))
+                                  text:(NSLocalizedString(@"DeleteTextKey", nil))
+                                accept:(NSLocalizedString(@"YesKey", nil))
+                                reject:(NSLocalizedString(@"CancelKey", nil)) onAccept:^{
+                                    NSError *error = nil;
+                                    [self.dataStorage removeObject:[self.dataStorage objectAtIndex:indexPath] error:error];
+                                    if (error) {
+                                        [self showErrorAlertWithText:[error localizedDescription] onAccept:nil];
+                                    }
+                                } onReject:nil];
+    }
 }
 
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return [self.dataSource numberOfObjects];
+    return [self.dataStorage numberOfObjects];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     NDCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"imageCell" forIndexPath:indexPath];
-    NDNamedImageModel *model = [self.dataSource objectAtIndex:indexPath.row];
+    NDNamedImage *model = [self.dataStorage objectAtIndex:indexPath];
     [cell fillWithNamedImage:model];
     return cell;
 }
@@ -89,6 +102,58 @@
      {
          [self.collectionView performBatchUpdates:nil completion:nil];
      } completion:nil];
+}
+
+#pragma mark - NSFetchedResultsControllerDelegate
+
+- (void)controllerWillChangeContent:(NSFetchedResultsController *)controller {
+    self.itemChanges = [[NSMutableArray alloc] init];
+}
+
+- (void)controller:(NSFetchedResultsController *)controller
+   didChangeObject:(id)anObject
+       atIndexPath:(NSIndexPath *)indexPath
+     forChangeType:(NSFetchedResultsChangeType)type
+      newIndexPath:(NSIndexPath *)newIndexPath {
+    NSMutableDictionary *change = [[NSMutableDictionary alloc] init];
+    switch(type) {
+        case NSFetchedResultsChangeInsert:
+            change[@(type)] = newIndexPath;
+            break;
+        case NSFetchedResultsChangeDelete:
+            change[@(type)] = indexPath;
+            break;
+        case NSFetchedResultsChangeUpdate:
+            break;
+        case NSFetchedResultsChangeMove:
+            break;
+    }
+    [self.itemChanges addObject:change];
+}
+
+- (void)controllerDidChangeContent:(NSFetchedResultsController *)controller {
+    [self.collectionView performBatchUpdates:^{
+
+        for (NSDictionary *change in self.itemChanges) {
+            [change enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+                NSFetchedResultsChangeType type = [key unsignedIntegerValue];
+                switch(type) {
+                    case NSFetchedResultsChangeInsert:
+                        [self.collectionView insertItemsAtIndexPaths:@[obj]];
+                        break;
+                    case NSFetchedResultsChangeDelete:
+                        [self.collectionView deleteItemsAtIndexPaths:@[obj]];
+                        break;
+                    case NSFetchedResultsChangeUpdate:
+                        break;
+                    case NSFetchedResultsChangeMove:
+                        break;
+                }
+            }];
+        }
+    } completion:^(BOOL finished) {
+        self.itemChanges = nil;
+    }];
 }
 
 @end

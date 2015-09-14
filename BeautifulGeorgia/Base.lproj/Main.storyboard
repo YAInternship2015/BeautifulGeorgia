@@ -223,6 +223,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="3a6-EA-pzg">
                             <size key="itemSize" width="75" height="50"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -239,6 +240,7 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="u2a-w9-vBX">
                                             <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                                            <gestureRecognizers/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -259,6 +261,7 @@
                         <connections>
                             <outlet property="dataSource" destination="Y9u-CZ-bDc" id="EXp-qr-MGW"/>
                             <outlet property="delegate" destination="Y9u-CZ-bDc" id="Hi2-X3-Dk7"/>
+                            <outletCollection property="gestureRecognizers" destination="8up-tq-q6b" appends="YES" id="I1R-3O-ekt"/>
                         </connections>
                     </collectionView>
                     <connections>
@@ -266,6 +269,11 @@
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jux-wH-UdZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="8up-tq-q6b">
+                    <connections>
+                        <action selector="handleLongPressGestureRecognizer:" destination="Y9u-CZ-bDc" id="OWi-cb-JqP"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1011" y="-364"/>
         </scene>
