@@ -1,4 +1,7 @@
 # BeautifulGeorgia
+Задание 3
+https://docs.google.com/document/d/1r8DWuT2X2ZQhC5ExV_D-bEDBwcBtCojJFAqv9egtXcw/edit
+
 Задание 2
 https://docs.google.com/document/d/1k4ecBUH3X3TqU1y40a1m5does-LpV8taHVUf6wNQoJQ/edit
 
