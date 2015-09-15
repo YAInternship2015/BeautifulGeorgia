@@ -27,6 +27,7 @@
     NSManagedObjectModel *managedObjectModel = [self createManagedObjectModel];
     NSPersistentStoreCoordinator *persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
     
+#warning строки @"BeautifulGeorgia.sqlite" и @"BeautifulGeorgia" встречаются несколько раз в данном файле, следует вынести их в константы и использовать уже их
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"BeautifulGeorgia.sqlite"];
     [self replaceDatabaseByUrl:storeURL];
     

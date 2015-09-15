@@ -10,6 +10,7 @@
 
 @interface UIViewController (NDAlertDisplaying)
 
+#warning лишний пробел после (void) + параметры accept и reject неудачно названы, неясно, что это тайтлы кнопок
 - (void) showActionAlertWithTitle:(NSString *)title
                              text:(NSString *)text
                            accept:(NSString *)acceptStr

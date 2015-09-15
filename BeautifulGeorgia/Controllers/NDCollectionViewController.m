@@ -36,6 +36,7 @@
                                 accept:(NSLocalizedString(@"YesKey", nil))
                                 reject:(NSLocalizedString(@"CancelKey", nil)) onAccept:^{
                                     NSError *error = nil;
+#warning использование strong ссылки на self в блоке может привести к retain cycle, в блоке надо использовать weak ссылку на self
                                     [self.dataStorage removeObject:[self.dataStorage objectAtIndex:indexPath] error:error];
                                     if (error) {
                                         [self showErrorAlertWithText:[error localizedDescription] onAccept:nil];
