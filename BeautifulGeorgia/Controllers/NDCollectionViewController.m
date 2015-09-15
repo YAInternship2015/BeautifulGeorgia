@@ -33,13 +33,13 @@
     if (sender.state == UIGestureRecognizerStateBegan && indexPath) {
         [self showActionAlertWithTitle:(NSLocalizedString(@"DeleteTitleKey", nil))
                                   text:(NSLocalizedString(@"DeleteTextKey", nil))
-                                accept:(NSLocalizedString(@"YesKey", nil))
-                                reject:(NSLocalizedString(@"CancelKey", nil)) onAccept:^{
+                                acceptTitle:(NSLocalizedString(@"YesKey", nil))
+                                rejectTitle:(NSLocalizedString(@"CancelKey", nil)) onAccept:^{
                                     NSError *error = nil;
-#warning использование strong ссылки на self в блоке может привести к retain cycle, в блоке надо использовать weak ссылку на self
-                                    [self.dataStorage removeObject:[self.dataStorage objectAtIndex:indexPath] error:error];
+                                    NDCollectionViewController *__weak weakSelf = self;
+                                    [weakSelf.dataStorage removeObject:[weakSelf.dataStorage objectAtIndex:indexPath] error:error];
                                     if (error) {
-                                        [self showErrorAlertWithText:[error localizedDescription] onAccept:nil];
+                                        [weakSelf showErrorAlertWithText:[error localizedDescription] onAccept:nil];
                                     }
                                 } onReject:nil];
     }

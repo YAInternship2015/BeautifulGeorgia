@@ -9,6 +9,9 @@
 #import "NDAppDelegate+MOC.h"
 #import <CoreData/CoreData.h>
 
+NSString *const baseName = @"BeautifulGeorgia";
+NSString *const baseType = @"sqlite";
+
 @implementation NDAppDelegate (MOC)
 
 #pragma mark - Core Data Stack
@@ -17,7 +20,7 @@
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
-- (NSManagedObjectContext *)createMainQueueManagedObjectContext {
+- (NSManagedObjectContext *)mainQueueManagedObjectContext {
     NSManagedObjectContext *managedObjectContext = [[NSManagedObjectContext alloc] init];
     [managedObjectContext setPersistentStoreCoordinator:[self createPersistentStoreCoordinator]];
     return managedObjectContext;
@@ -26,9 +29,8 @@
 - (NSPersistentStoreCoordinator *)createPersistentStoreCoordinator {
     NSManagedObjectModel *managedObjectModel = [self createManagedObjectModel];
     NSPersistentStoreCoordinator *persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:managedObjectModel];
-    
-#warning строки @"BeautifulGeorgia.sqlite" и @"BeautifulGeorgia" встречаются несколько раз в данном файле, следует вынести их в константы и использовать уже их
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"BeautifulGeorgia.sqlite"];
+
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:[NSString stringWithFormat:@"%@.%@", baseName, baseType]];
     [self replaceDatabaseByUrl:storeURL];
     
     NSError *error = nil;
@@ -47,7 +49,7 @@
 }
 
 - (NSManagedObjectModel *)createManagedObjectModel {
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"BeautifulGeorgia" withExtension:@"momd"];
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:baseName withExtension:@"momd"];
     NSManagedObjectModel *managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     return managedObjectModel;
 }
@@ -57,7 +59,7 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
     if (![fileManager fileExistsAtPath:dbDocumentsPath]) {
-        NSString *dbBundlePath = [[NSBundle mainBundle] pathForResource:@"BeautifulGeorgia" ofType:@"sqlite"];
+        NSString *dbBundlePath = [[NSBundle mainBundle] pathForResource:baseName ofType:baseType];
         [fileManager copyItemAtPath:dbBundlePath toPath:dbDocumentsPath error:nil];
     }
 }

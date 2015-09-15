@@ -10,8 +10,7 @@
 
 @interface NDAppDelegate (MOC)
 
-#warning если это геттер, то стоило его назвать просто mainQueueManagedObjectContext
-- (NSManagedObjectContext *)createMainQueueManagedObjectContext;
+- (NSManagedObjectContext *)mainQueueManagedObjectContext;
 - (void)saveContext:(NSManagedObjectContext *)managedObjectContext;
 
 @end

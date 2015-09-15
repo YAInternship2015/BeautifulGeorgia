@@ -13,11 +13,15 @@
 
 @implementation NDNamedImageFactory
 
-+ (NDNamedImage *)namedImageObjectWithName:(NSString *)name image:(UIImage *)image {
++ (NDNamedImage *)namedImageObjectWithName:(NSString *)name
+                                     image:(UIImage *)image
+                    inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
     if (!image) {
         image = [UIImage defaultImage];
     }
-    return [NDNamedImage namedImageWithName:name image:image];
+    return [NDNamedImage namedImageWithName:name
+                                      image:image
+                     inManagedObjectContext:managedObjectContext];
 }
 
 @end

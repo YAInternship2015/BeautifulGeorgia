@@ -65,7 +65,7 @@
     } else {
         NSError *error = nil;
         NDDataStorage *dataStorage = [[NDDataStorage alloc] init];
-        [dataStorage saveNewObject:[NDNamedImageFactory namedImageObjectWithName:title image:nil] error:error];
+        [dataStorage saveNewObject:[NDNamedImageFactory namedImageObjectWithName:title image:nil inManagedObjectContext:AppDelegate.managedObjectContext] error:error];
         if (error) {
             NSString *errorText = [error localizedDescription];
             [self showErrorAlertWithText:errorText onAccept:^{

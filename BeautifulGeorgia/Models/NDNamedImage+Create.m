@@ -10,11 +10,12 @@
 
 @implementation NDNamedImage (Create)
 
-#warning в идеале нужно прокидывать в фабрику и, соответственно, в модель контекст, в котором нужно создавать модель
-+ (NDNamedImage *)namedImageWithName:(NSString *)name image:(UIImage *)image {
++ (NDNamedImage *)namedImageWithName:(NSString *)name
+                               image:(UIImage *)image
+              inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext {
     NDNamedImage *namedImage = [NSEntityDescription
                                 insertNewObjectForEntityForName:@"NDNamedImage"
-                                inManagedObjectContext:AppDelegate.managedObjectContext];
+                                inManagedObjectContext:managedObjectContext];
     namedImage.name = name;
     namedImage.image = UIImagePNGRepresentation(image);
     return namedImage;

@@ -85,12 +85,12 @@
 		85D283DD1B79454B00546367 /* NDAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDAppDelegate.m; sourceTree = "<group>"; };
 		85D283E11B79454B00546367 /* NDTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDTableViewController.h; sourceTree = "<group>"; };
 		85D283E21B79454B00546367 /* NDTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDTableViewController.m; sourceTree = "<group>"; };
-		85E1FFD21BA5972A00881120 /* NDAppDelegate+MOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NDAppDelegate+MOC.h"; sourceTree = "<group>"; };
-		85E1FFD31BA5972A00881120 /* NDAppDelegate+MOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NDAppDelegate+MOC.m"; sourceTree = "<group>"; };
+		85E1FFD21BA5972A00881120 /* NDAppDelegate+MOC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NDAppDelegate+MOC.h"; path = "../Common/NDAppDelegate+MOC.h"; sourceTree = "<group>"; };
+		85E1FFD31BA5972A00881120 /* NDAppDelegate+MOC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NDAppDelegate+MOC.m"; path = "../Common/NDAppDelegate+MOC.m"; sourceTree = "<group>"; };
 		85E1FFD51BA59DBF00881120 /* NDDataStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDDataStorage.h; sourceTree = "<group>"; };
 		85E1FFD61BA59DBF00881120 /* NDDataStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDDataStorage.m; sourceTree = "<group>"; };
-		85E1FFE41BA5A41A00881120 /* NDNamedImage+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NDNamedImage+Create.h"; sourceTree = "<group>"; };
-		85E1FFE51BA5A41A00881120 /* NDNamedImage+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NDNamedImage+Create.m"; sourceTree = "<group>"; };
+		85E1FFE41BA5A41A00881120 /* NDNamedImage+Create.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NDNamedImage+Create.h"; path = "../Models/NDNamedImage+Create.h"; sourceTree = "<group>"; };
+		85E1FFE51BA5A41A00881120 /* NDNamedImage+Create.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NDNamedImage+Create.m"; path = "../Models/NDNamedImage+Create.m"; sourceTree = "<group>"; };
 		85E1FFE71BA6F78600881120 /* UIColor+NDCustomColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+NDCustomColors.h"; sourceTree = "<group>"; };
 		85E1FFE81BA6F78600881120 /* UIColor+NDCustomColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+NDCustomColors.m"; sourceTree = "<group>"; };
 		85E1FFEA1BA738AC00881120 /* NDNamedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDNamedImage.h; sourceTree = "<group>"; };
@@ -124,6 +124,10 @@
 				851D983A1B9F329C0010BCC7 /* UIImage+NDDefaultImage.m */,
 				85E1FFE71BA6F78600881120 /* UIColor+NDCustomColors.h */,
 				85E1FFE81BA6F78600881120 /* UIColor+NDCustomColors.m */,
+				85E1FFD21BA5972A00881120 /* NDAppDelegate+MOC.h */,
+				85E1FFD31BA5972A00881120 /* NDAppDelegate+MOC.m */,
+				85E1FFE41BA5A41A00881120 /* NDNamedImage+Create.h */,
+				85E1FFE51BA5A41A00881120 /* NDNamedImage+Create.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -135,8 +139,6 @@
 				85E1FFEB1BA738AC00881120 /* NDNamedImage.m */,
 				85B398E81B8F8D720012587F /* NDNamedImageFactory.h */,
 				85B398E91B8F8D720012587F /* NDNamedImageFactory.m */,
-				85E1FFE41BA5A41A00881120 /* NDNamedImage+Create.h */,
-				85E1FFE51BA5A41A00881120 /* NDNamedImage+Create.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -202,8 +204,6 @@
 			children = (
 				85D283DC1B79454B00546367 /* NDAppDelegate.h */,
 				85D283DD1B79454B00546367 /* NDAppDelegate.m */,
-				85E1FFD21BA5972A00881120 /* NDAppDelegate+MOC.h */,
-				85E1FFD31BA5972A00881120 /* NDAppDelegate+MOC.m */,
 				85B398E51B8F84490012587F /* NDDataValidator.h */,
 				85B398E61B8F84490012587F /* NDDataValidator.m */,
 				854903991B9CD7EF002CF973 /* NDNotification.h */,

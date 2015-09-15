@@ -10,6 +10,8 @@
 
 @interface NDNamedImage (Create)
 
-+ (NDNamedImage *)namedImageWithName:(NSString *)name image:(UIImage *)image;
++ (NDNamedImage *)namedImageWithName:(NSString *)name
+                               image:(UIImage *)image
+              inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 @end

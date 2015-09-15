@@ -13,6 +13,8 @@
 
 @interface NDNamedImageFactory : NSObject
 
-+ (NDNamedImage *)namedImageObjectWithName:(NSString *)name image:(UIImage *)image;
++ (NDNamedImage *)namedImageObjectWithName:(NSString *)name
+                                     image:(UIImage *)image
+                    inManagedObjectContext:(NSManagedObjectContext *)managedObjectContext;
 
 @end

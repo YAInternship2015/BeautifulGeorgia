@@ -18,7 +18,7 @@
 @implementation NDAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.managedObjectContext = [self createMainQueueManagedObjectContext];
+    self.managedObjectContext = [self mainQueueManagedObjectContext];
     return YES;
 }
 

@@ -11,16 +11,16 @@
 
 @implementation UIViewController (NDAlertDisplaying)
 
-- (void) showActionAlertWithTitle:(NSString *)title
+- (void)showActionAlertWithTitle:(NSString *)title
                              text:(NSString *)text
-                           accept:(NSString *)acceptStr
-                           reject:(NSString *)rejectStr
+                     acceptTitle:(NSString *)aTitle
+                     rejectTitle:(NSString *)rTitle
                          onAccept:(void(^)())accept
                          onReject:(void(^)())reject {
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:title
                                                                         message:text
                                                                  preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *acceptAct = [UIAlertAction actionWithTitle:acceptStr
+    UIAlertAction *acceptAct = [UIAlertAction actionWithTitle:aTitle
                                                         style:UIAlertActionStyleDefault
                                                       handler:^(UIAlertAction *action) {
                                                           if (accept) {
@@ -29,7 +29,7 @@
                                                       }];
     [controller addAction:acceptAct];
     
-    UIAlertAction *rejectAct = [UIAlertAction actionWithTitle:rejectStr
+    UIAlertAction *rejectAct = [UIAlertAction actionWithTitle:rTitle
                                                         style:UIAlertActionStyleDestructive
                                                       handler:^(UIAlertAction *action) {
                                                           if (reject) {
